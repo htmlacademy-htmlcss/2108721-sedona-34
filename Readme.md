@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Roman Tsarew](https://up.htmlacademy.ru/htmlcss/34/user/2108721).
-* Наставник: `Неизвестно`.
+* Наставник: [Артём Картавый](https://htmlacademy.ru/profile/artem_k).
 
 ---
 
