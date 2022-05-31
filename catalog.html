@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
 </head>
-
 <body>
   <header class="page-header">
     <nav class="navigation">
       <a class="navigation-logo" href="index.html">
-        <img class="header-logo" width="100" height="50" alt="Эмблема города Sedona" src="header-logo.svg">
+        <img class="header-logo" width="139" height="70" alt="Эмблема города Sedona" src="./images/catalog/header/header-logo.svg">
       </a>
       <ul class="navigation-list">
         <li class="navigation-item">
@@ -26,13 +24,14 @@
       <ul class="navigation-user">
         <li class="navigation-item">
           <a class="navigation-link" href="#">
-            <img class="search-button" src="search-button.svg" width="100" height="50" alt="поиск.">
+            <img class="search-button" src="./images/catalog/header/search-button.svg" width="18" height="18" alt="поиск.">
             <span class="visually-hidden">поиск.</span>
           </a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">
-            <img class="favorite-button" src="favorite-button.svg" width="100" height="50" alt="избранное.">
+            <img class="favorite-button" src="./images/catalog/header/favorite-button.svg" width="18" height="17" alt="избранное.">
+            <img class="favorite-circle-element" src="./images/index/header/favorite-circle.svg" width="20" height="20" alt="количество в желаемом">
             <span class="visually-hidden">избранное.</span>
           </a>
         </li>
@@ -44,17 +43,17 @@
   </header>
   <main>
     <section class="filter">
+      <img class="filter-background" src="./images/catalog/hotels-search/filter-background.jpg" width="1200" height="403" alt="пейзаж каньона очень размытый.">
       <h2 class="filter-title">Гостинницы Седоны</h2>
       <ul class="breadcrubs">
         <li class="breadcrubs-item">
           <a class="breadcrubs-link" href="index.html">
-            <img class="breadcrubs-homepage" src="logo-house-bread.svg" alt="вернутся на главную" width="100"
-              height="50">
+            <img class="breadcrubs-homepage" src="./images/catalog/hotels-search/logo-house-bread.svg" alt="вернутся на главную" width="12" height="12">
           </a>
         </li>
         <li class="breadcrubs-item">
-          <img class="breadcrubs-arrow" src="logo-arrow-bread.svg" alt="стрелочка вложенности" width="100" height="50">
-          <a class="breadcrubs-link">Гостинницы</a>
+          <img class="breadcrubs-arrow" src="./images/catalog/hotels-search/logo-arrow-bread.svg" alt="стрелочка вложенности" width="5" height="8">
+          <a class="breadcrubs-link">Гостинницы</a> // запутался
         </li>
       </ul>
       <fieldset class="catalog-filter-group">
@@ -103,6 +102,10 @@
           </li>
         </ul>
       </fieldset>
+      <section class="cost-filter">
+        <p class="catalog-filter-title">Стоимость, ₽:</p>
+        <div class="cost-field">ТУТ НЕ ЗНАЮ КАК ДОБАВИТЬ ЭТО ПОЛЕ!!!!</div>
+      </section>
       <section class="price-parametrs">
         <button class="accept-button" type="submit">Применить</button>
         <button class="cancel-button" type="submit">Сбросить</button>
@@ -113,104 +116,110 @@
         <select class="hotel-select">
           <option value="cheap" selected>Сначала дешевые</option>
           <option value="expensive">Сначала дорогие</option>
+          <img class="hotel-select-arrow" src="./images/catalog/filter panel/arrow.svg" alt="стрелочка выбора сортировки" width="12" height="7">
         </select>
         <ul class="sort-list">
           <li class="sort-item">
             <button class="sort-button" type="№"> //какой тип тут должен быть?
-              <img class="sort-table" src="icon-table-filter.svg" alt="сортировка таблицей" width="100" height="50">
+              <img class="sort-table" src="./images/catalog/filter panel/icon-table-filter.svg" alt="сортировка таблицей" width="48" height="48">
             </button>
           </li>
           <li class="select-item">
             <button class="sort-button" type="№"> //какой тип тут должен быть?
-              <img class="sort-slideshow" src="icon-slideshow-search.svg" alt="сортировка слайдами" width="100"
-                height="50">
+              <img class="sort-slideshow" src="./images/catalog/filter panel/icon-slideshow-search.svg" alt="сортировка слайдами" width="48"
+                height="48">
             </button>
           </li>
           <li class="select-item">
             <button class="sort-button" type="№"> //какой тип тут должен быть?
-              <img class="sort-button" src="icon-list-search.svg" alt="сортировка списком" width="100" height="50">
+              <img class="sort-button" src="./images/catalog/filter panel/icon-list-search.svg" alt="сортировка списком" width="48" height="48">
             </button>
           </li>
         </ul>
       </section>
       <ul class="catalog-list">
+        <h2 class="visually-hidden">Отели после сортировки</h2> // почему заголовок видно???
         <li class="catalog-item">
-          <a class="hotel-1">
-            <img class="catalog-item-image" src="hotel-1.png" alt="Звездное небо сквозь щель в каньоне">
+          <a class="hotel-1" href="#">
+            <img class="catalog-item-image" src="./images/catalog/hotels/hotel1/hotel-1.png" alt="Звездное небо сквозь щель в каньоне" width="300" height="211">
           </a>
           <h1 class="catalog-item-title">Amara Resort &amp; Spa</h1>
           <p class="catalog-item-description">Гостинница</p>
           <p class="catalog-item-description">От 4000 ₽</p>
           <a class="catalog-item-link" type="button" href="#">Подробнее</a> //добавить бекграунд
           <button class="add-to-favorite" type="button">в избранное</button> //добавить бекграунд
-          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
-          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
-          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
-          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <img class="raiting" src="./images/catalog/hotels/hotel1/hotel-1-stars.svg" alt="рейтинг 4 звезды" width="140" height="37">
           <p class="catalog-item-raiting">рейтинг: 8,5</p> //добавить бекграунд
         </li>
         <li class="catalog-item">
-          <img class="catalog-item-image" src="hotel-2.png"
-            alt="пейзаж с каньонами по середине и радугой над ними, на небе тучи" width="100" height="50">
+          <img class="catalog-item-image" src="./images/catalog/hotels/hotel2/hotel-2-pic.png"
+            alt="пейзаж с каньонами по середине и радугой над ними, на небе тучи" width="300" height="211">
           <h1 class="catalog-item-title">Villas at Poco Diablo</h1>
           <p class="catalog-item-description">Гостинница</p>
           <p class="catalog-item-description">От 5000 ₽</p>
           <a class="catalog-item-link" type="button" href="#">Подробнее</a> //добавить бекграунд
           <button class="added-to-favorite" type="button">в избранном</button> //добавить бекграунд
-          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
-          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
-          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
-          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <img class="raiting" src="./images/catalog/hotels/hotel2/hotel-1-stars.svg" alt="рейтинг 4 звезды" width="140" height="37">
           <p class="catalog-item-raiting">рейтинг: 9,2</p> //добавить бекграунд
         </li>
         <li class="catalog-item">
-          <img class="catalog-item-image" src="hotel-3.png" alt="пейзаж с каньоном, заросшим зеленью, закат на небе.">
+          <img class="catalog-item-image" src="./images/catalog/hotels/hotel3/hotel-3-pic.png" alt="пейзаж с каньоном, заросшим зеленью, закат на небе." width="300" height="211">
           <h1 class="catalog-item-title">Desert Quail Inn</h1>
           <p class="catalog-item-description">Гостинница</p>
           <p class="catalog-item-description">От 2500 ₽</p>
           <a class="catalog-item-link" type="button" href="#">Подробнее</a> //добавить бекграунд
           <button class="add-to-favorite" type="button">в избранное</button> //добавить бекграунд
-          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
-          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
-          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <img class="raiting" src="./images/catalog/hotels/hotel3/hotel-3-stars.svg" alt="рейтинг 3 звезды" width="140" height="37">
+
           <p class="catalog-item-raiting">рейтинг: 6,9</p> //добавить бекграунд
         </li>
         <li class="catalog-item">
-          <img class="catalog-item-image" src="hotel-4.png"
-            alt="пейзаж с каньоном по середине, на фоне ночного неба со звездами.">
+          <img class="catalog-item-image" src="./images/catalog/hotels/hotel4/hotel-4-pic.png"
+            alt="пейзаж с каньоном по середине, на фоне ночного неба со звездами." width="300" height="211">
           <h1 class="catalog-item-title">GreenTree Inn</h1>
           <p class="catalog-item-description">Гостинница</p>
           <p class="catalog-item-description">От 1500 ₽</p>
           <a class="catalog-item-link" type="button" href="#">Подробнее</a> //добавить бекграунд
           <button class="add-to-favorite" type="button">в избранное</button> //добавить бекграунд
-          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
-          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <img class="raiting" src="./images/catalog/hotels/hotel4/hotel-4-stars.svg" alt="рейтинг 2 звезды" width="140" height="37">
           <p class="catalog-item-raiting">рейтинг: 5,0</p> //добавить бекграунд
         </li>
       </ul>
       <ul class="pagination">
         <li class="pagination-item">
-          <a class="pagination-link pagination-current">1</a> //добавить бекграунд
+          <a class="pagination-link pagination-current">
+            <img class="pagination-active-button" src="./images/catalog/pagination/pagination-active-button.svg" alt="кнопка выбора страницы" width="60" height="60">
+            1</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link" href="#">2</a> //добавить бекграунд
+          <a class="pagination-link" href="#">
+            <img class="pagination-notactive-button" src="./images/catalog/pagination/pagination-notactive-button.svg" alt="кнопка выбора страницы" width="60" height="60">
+            2</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link" href="#">3</a> //добавить бекграунд
+          <a class="pagination-link" href="#">
+            <img class="pagination-notactive-button" src="./images/catalog/pagination/pagination-notactive-button.svg" alt="кнопка выбора страницы" width="60" height="60">
+            3</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link" href="#">4</a> //добавить бекграунд
+          <a class="pagination-link" href="#">
+            <img class="pagination-notactive-button" src="./images/catalog/pagination/pagination-notactive-button.svg" alt="кнопка выбора страницы" width="60" height="60">
+            4</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link" href="#">...</a> //добавить бекграунд
+          <a class="pagination-link" href="#">
+            <img class="pagination-notactive-button" src="./images/catalog/pagination/pagination-notactive-button.svg" alt="кнопка выбора страницы" width="60" height="60">
+            ...</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link" href="#">10</a> //добавить бекграунд
+          <a class="pagination-link" href="#">
+            <img class="pagination-notactive-button" src="./images/catalog/pagination/pagination-notactive-button.svg" alt="кнопка выбора страницы" width="60" height="60">
+            10</a>
         </li>
       </ul>
       <p class="results-on-page">Гостиниц на странице</p>
       <select class="results-on-page-select">
-        <option value="select-value">4</option>
+        <option value="select-value">4</option> //не понял как вставить стиль стрелочки
       </select>
       <section class="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
@@ -218,7 +227,8 @@
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <label for="subscribe-email">Email</label>
           <input class="field" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" required>
-          <button class="button subscribe-button" type="submit"> //добавить бекграунд
+          <button class="button subscribe-button" type="submit">
+            <img class="subscribe-button-background" src="./images/catalog/subscribe/subscribe-button-background.svg" alt="фон кнопки подписаться" width="200" height="60">
             <span class="submit-button">подписаться</span>
           </button>
         </form>
@@ -226,37 +236,35 @@
   </main>
   <footer class="page-footer">
     <section class="footer-social">
-      <h2 class="visually-hidden">Подвал сайта</h2>
       <ul class="social">
         <li class="social-item">
           <a class="button" href="https://vk.com/htmlacademy">
-            <img class="vk-button" src="vk-button.svg" alt="кнопка - перейти Вконтакте" width="100" height="50">
+            <img class="vk-button" src="./images/index/footer/VK-button.svg" alt="кнопка - перейти Вконтакте" width="24" height="14">
             <span class="visually-hidden">вконтакте</span>
           </a>
         </li>
         <li class="social-item">
           <a class="button" href="https://t.me/htmlacademy">
-            <img class="tg-button" src="tg-button.svg" alt="кнопка - перейти телеграмм" width="100" height="50">
+            <img class="tg-button" src="./images/index/footer/tg-button.svg" alt="кнопка перейти в телеграмм" width="24" height="14">
             <span class="visually-hidden">телеграм</span>
           </a>
         </li>
         <li class="social-item">
           <a class="button" href="https://www.youtube.com/user/htmlacademyru">
-            <img class="youtube-button" src="youtube-button.svg" alt="кнопка - перейти в ютуб" width="100" height="50">
+            <img class="youtube-button" src="./images/index/footer/youtube-button.svg" alt="кнопка - перейти в ютуб"
+              width="24" height="14">
             <span class="visually-hidden">Ютуб</span>
           </a>
         </li>
       </ul>
     </section>
     <section class="footer-phone">
-      <h2 class="visually-hidden">контактный телефон</h2>
       <a class="footer-phone-call" href="tel:+7-812-812-12-12">+7 812 812-12-12</a>
     </section>
     <section class="about-text">
-      <h2 class="visually-hidden">данные о разработчике страницы</h2>
       <a class="about-link" href="https://htmlacademy.ru/">
-        <img class="html-academy-button" src="HTML-Academy-button.svg" alt="перейти на сайт разработчика" width="100"
-          height="50">
+        <img class="html-academy-button" src="./images/index/footer/HTML-Academy-button.svg"
+          alt="перейти на сайт разработчика" width="115" height="33">
       </a>
     </section>
   </footer>
