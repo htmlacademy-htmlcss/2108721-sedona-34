@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <base href="https://htmlacademy-htmlcss.github.io/2108721-sedona-34/2/">
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="navigation">
+      <a class="navigation-logo" href="index.html">
+        <img class="header-logo" width="100" height="50" alt="Эмблема города Sedona" src="header-logo.svg">
+      </a>
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a class="navigation-link-current" href="index.html">Главная</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="about.html">О Седоне</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="catalog.html">Гостинницы</a>
+        </li>
+      </ul>
+      <ul class="navigation-user">
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">
+            <img class="search-button" src="search-button.svg" width="100" height="50" alt="поиск.">
+            <span class="visually-hidden">поиск.</span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">
+            <img class="favorite-button" src="favorite-button.svg" width="100" height="50" alt="избранное.">
+            <span class="visually-hidden">избранное.</span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="i-want-button" type="button" href="#">Хочу сюда</a> //отсутсвует subtype??
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="filter">
+      <h2 class="filter-title">Гостинницы Седоны</h2>
+      <ul class="breadcrubs">
+        <li class="breadcrubs-item">
+          <a class="breadcrubs-link" href="index.html">
+            <img class="breadcrubs-homepage" src="logo-house-bread.svg" alt="вернутся на главную" width="100"
+              height="50">
+          </a>
+        </li>
+        <li class="breadcrubs-item">
+          <img class="breadcrubs-arrow" src="logo-arrow-bread.svg" alt="стрелочка вложенности" width="100" height="50">
+          <a class="breadcrubs-link">Гостинницы</a>
+        </li>
+      </ul>
+      <fieldset class="catalog-filter-group">
+        <legend class="catalog-filter-title">Инфраструктура</legend>
+        <ul class="catalog-filter-list">
+          <li class="catalog-filter-item">
+            <label class="control">
+              <input class="control-input" type="checkbox" name="swimming-pool" checked>
+              Бассейн
+            </label>
+          </li>
+          <li class="catalog-filter-item">
+            <label class="control">
+              <input class="control-input" type="checkbox" name="parking" checked>
+              Парковка
+            </label>
+          </li>
+          <li class="catalog-filter-item">
+            <label class="control">
+              <input class="control-input" type="checkbox" name="wi-fi">
+              wi-fi
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="catalog-filter-group">
+        <legend class="catalog-filter-title">Тип жилья</legend>
+        <ul class="catalog-filter-list">
+          <li class="catalog-filter-item">
+            <label class="control">
+              <input class="control-input" type="radio" name="housing-type" value="hotel" checked>
+              Гостинница
+            </label>
+          </li>
+          <li class="catalog-filter-item">
+            <label class="control">
+              <input class="control-input" type="radio" name="housing-type" value="motel">
+              Мотель
+            </label>
+          </li>
+          <li class="catalog-filter-item">
+            <label class="control">
+              <input class="control-input" type="radio" name="housing-type" value="apartments">
+              Апартаменты
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <section class="price-parametrs">
+        <button class="accept-button" type="submit">Применить</button>
+        <button class="cancel-button" type="submit">Сбросить</button>
+      </section>
+      <section class="select-control">
+        <h2 class="visually-hidden">Параметры сортировки</h2>
+        <h3 class="search-result">найдено гостиниц: 38</h3>
+        <select class="hotel-select">
+          <option value="cheap" selected>Сначала дешевые</option>
+          <option value="expensive">Сначала дорогие</option>
+        </select>
+        <ul class="sort-list">
+          <li class="sort-item">
+            <button class="sort-button" type="№"> //какой тип тут должен быть?
+              <img class="sort-table" src="icon-table-filter.svg" alt="сортировка таблицей" width="100" height="50">
+            </button>
+          </li>
+          <li class="select-item">
+            <button class="sort-button" type="№"> //какой тип тут должен быть?
+              <img class="sort-slideshow" src="icon-slideshow-search.svg" alt="сортировка слайдами" width="100"
+                height="50">
+            </button>
+          </li>
+          <li class="select-item">
+            <button class="sort-button" type="№"> //какой тип тут должен быть?
+              <img class="sort-button" src="icon-list-search.svg" alt="сортировка списком" width="100" height="50">
+            </button>
+          </li>
+        </ul>
+      </section>
+      <ul class="catalog-list">
+        <li class="catalog-item">
+          <a class="hotel-1">
+            <img class="catalog-item-image" src="hotel-1.png" alt="Звездное небо сквозь щель в каньоне">
+          </a>
+          <h1 class="catalog-item-title">Amara Resort &amp; Spa</h1>
+          <p class="catalog-item-description">Гостинница</p>
+          <p class="catalog-item-description">От 4000 ₽</p>
+          <a class="catalog-item-link" type="button" href="#">Подробнее</a> //добавить бекграунд
+          <button class="add-to-favorite" type="button">в избранное</button> //добавить бекграунд
+          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <p class="catalog-item-raiting">рейтинг: 8,5</p> //добавить бекграунд
+        </li>
+        <li class="catalog-item">
+          <img class="catalog-item-image" src="hotel-2.png"
+            alt="пейзаж с каньонами по середине и радугой над ними, на небе тучи" width="100" height="50">
+          <h1 class="catalog-item-title">Villas at Poco Diablo</h1>
+          <p class="catalog-item-description">Гостинница</p>
+          <p class="catalog-item-description">От 5000 ₽</p>
+          <a class="catalog-item-link" type="button" href="#">Подробнее</a> //добавить бекграунд
+          <button class="added-to-favorite" type="button">в избранном</button> //добавить бекграунд
+          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <p class="catalog-item-raiting">рейтинг: 9,2</p> //добавить бекграунд
+        </li>
+        <li class="catalog-item">
+          <img class="catalog-item-image" src="hotel-3.png" alt="пейзаж с каньоном, заросшим зеленью, закат на небе.">
+          <h1 class="catalog-item-title">Desert Quail Inn</h1>
+          <p class="catalog-item-description">Гостинница</p>
+          <p class="catalog-item-description">От 2500 ₽</p>
+          <a class="catalog-item-link" type="button" href="#">Подробнее</a> //добавить бекграунд
+          <button class="add-to-favorite" type="button">в избранное</button> //добавить бекграунд
+          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <p class="catalog-item-raiting">рейтинг: 6,9</p> //добавить бекграунд
+        </li>
+        <li class="catalog-item">
+          <img class="catalog-item-image" src="hotel-4.png"
+            alt="пейзаж с каньоном по середине, на фоне ночного неба со звездами.">
+          <h1 class="catalog-item-title">GreenTree Inn</h1>
+          <p class="catalog-item-description">Гостинница</p>
+          <p class="catalog-item-description">От 1500 ₽</p>
+          <a class="catalog-item-link" type="button" href="#">Подробнее</a> //добавить бекграунд
+          <button class="add-to-favorite" type="button">в избранное</button> //добавить бекграунд
+          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <img class="raiting" src="raiting-star.svg" alt="рейтинг в звездах" width="100" height="50">
+          <p class="catalog-item-raiting">рейтинг: 5,0</p> //добавить бекграунд
+        </li>
+      </ul>
+      <ul class="pagination">
+        <li class="pagination-item">
+          <a class="pagination-link pagination-current">1</a> //добавить бекграунд
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">2</a> //добавить бекграунд
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">3</a> //добавить бекграунд
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">4</a> //добавить бекграунд
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">...</a> //добавить бекграунд
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">10</a> //добавить бекграунд
+        </li>
+      </ul>
+      <p class="results-on-page">Гостиниц на странице</p>
+      <select class="results-on-page-select">
+        <option value="select-value">4</option>
+      </select>
+      <section class="subscribe">
+        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+        <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+          <label for="subscribe-email">Email</label>
+          <input class="field" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" required>
+          <button class="button subscribe-button" type="submit"> //добавить бекграунд
+            <span class="submit-button">подписаться</span>
+          </button>
+        </form>
+      </section>
+  </main>
+  <footer class="page-footer">
+    <section class="footer-social">
+      <h2 class="visually-hidden">Подвал сайта</h2>
+      <ul class="social">
+        <li class="social-item">
+          <a class="button" href="https://vk.com/htmlacademy">
+            <img class="vk-button" src="vk-button.svg" alt="кнопка - перейти Вконтакте" width="100" height="50">
+            <span class="visually-hidden">вконтакте</span>
+          </a>
+        </li>
+        <li class="social-item">
+          <a class="button" href="https://t.me/htmlacademy">
+            <img class="tg-button" src="tg-button.svg" alt="кнопка - перейти телеграмм" width="100" height="50">
+            <span class="visually-hidden">телеграм</span>
+          </a>
+        </li>
+        <li class="social-item">
+          <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+            <img class="youtube-button" src="youtube-button.svg" alt="кнопка - перейти в ютуб" width="100" height="50">
+            <span class="visually-hidden">Ютуб</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer-phone">
+      <h2 class="visually-hidden">контактный телефон</h2>
+      <a class="footer-phone-call" href="tel:+7-812-812-12-12">+7 812 812-12-12</a>
+    </section>
+    <section class="about-text">
+      <h2 class="visually-hidden">данные о разработчике страницы</h2>
+      <a class="about-link" href="https://htmlacademy.ru/">
+        <img class="html-academy-button" src="HTML-Academy-button.svg" alt="перейти на сайт разработчика" width="100"
+          height="50">
+      </a>
+    </section>
+  </footer>
+</body>
+
+</html>
