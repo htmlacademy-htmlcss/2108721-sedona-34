@@ -87,6 +87,8 @@
               </li>
             </ul>
             <legend class="catalog-filter-title">Тип жилья</legend>
+            <!-- заругался валидатор почему то
+            Element legend not allowed as child of element fieldset in this context. (Suppressing further errors from this subtree.) -->
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
@@ -107,8 +109,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="cost-panel">
-            <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+          <h2 class="catalog-filter-title">Стоимость, ₽:</h2>
             <section class="cost-filter">
               <div class="cost-field">
                 <button class="min-value">от</button>
@@ -119,7 +120,7 @@
               <button class="button button-accept" type="submit">Применить</button>
               <button class="button button-decline" type="submit">Сбросить</button>
             </section>
-          </fieldset>
+          </h2>
         </form>
       </div>
       <section class="select-control">
@@ -132,29 +133,29 @@
         <ul class="sort-list">
           <li class="sort-item">
             <button class="sort-button" type="button" aria-label="сортировка таблицей">
-              <img class="table-button" src="./images/catalog/sort-panel/icon-table-filter.svg">
+              <img class="table-button" src="./images/catalog/sort-panel/icon-table-filter.svg"
+                alt="иконка сортировки таблицей">
             </button>
           </li>
           <li class="select-item">
             <button class="sort-button" type="button" aria-label="сортировка слайдами">
-              <img class="table-button" src="./images/catalog/sort-panel/icon-slideshow-search.svg">
-            </button>
+              <img class="table-button" src="./images/catalog/sort-panel/icon-slideshow-search.svg"
+                alt="иконка сортировки слайдами">
             </button>
           </li>
           <li class="select-item">
             <button class="sort-button" type="button" aria-label="сортировка списком">
-              <img class="table-button" src="./images/catalog/sort-panel/icon-list-search.svg">
-            </button>
+              <img class="table-button" src="./images/catalog/sort-panel/icon-list-search.svg"
+                alt="иконка сортировки списком">
             </button>
           </li>
         </ul>
       </section>
+      <h2 class="visually-hidden">Отели после сортировки</h2>
       <ul class="catalog-list">
-        <h2 class="visually-hidden">Отели после сортировки</h2>
         <li class="catalog-item">
           <a class="hotel-1" href="#">
-            <img class="catalog-item-image" src="./images/catalog/hotels/hotel-1/hotel-pic-1.png"
-              alt="Звездное небо сквозь щель в каньоне" width="300" height="211">
+            <img class="catalog-item-image" src="./images/catalog/hotels/hotel-1/hotel-pic-1.png" alt="Звездное небо сквозь щель в каньоне" width="300" height="211">
           </a>
           <h2 class="catalog-item-title">Amara Resort &amp; Spa</h2>
           <span class="catalog-item-description">Гостинница</span>
@@ -243,6 +244,8 @@
             <a class="button button-pagination" type="button" href="#">10</a>
           </li>
         </ul>
+        <!-- на каждой кнопке, ругается валидатор что отсутствует сабтайп. хрен знает че это
+        Error: Bad value button for attribute type on element a: Subtype missing. -->
         <span class="hotel-onpage">Гостинниц на странице:</span>
         <select class="pagination-results">
           <option value="select-value">4</option>
@@ -266,13 +269,15 @@
         <ul class="social">
           <li class="social-item">
             <a class="social-button" href="https://vk.com/htmlacademy">
-              <img class="social-image" src="./images/index/footer/vk-button.svg" alt="кнопка перейти вконтакте" width="24" height="14">
+              <img class="social-image" src="./images/index/footer/vk-button.svg" alt="кнопка перейти вконтакте"
+                width="24" height="14">
               <span class="visually-hidden">вконтакте</span>
             </a>
           </li>
           <li class="social-item">
             <a class="social-button" href="https://t.me/htmlacademy">
-              <img class="social-image" src="./images/index/footer/tg-button.svg" alt="кнопка перейти в телеграм" width="24" height="14">
+              <img class="social-image" src="./images/index/footer/tg-button.svg" alt="кнопка перейти в телеграм"
+                width="24" height="14">
               <span class="visually-hidden">телеграм</span>
             </a>
           </li>
