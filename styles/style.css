@@ -33,14 +33,21 @@ html {
 
 body {
   margin: 0 auto;
-  width: 1200px;
+  width: 1280px;
   min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 24px;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #F2F2F2;
   text-align: center;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .page-header {
@@ -65,7 +72,7 @@ body {
   align-items: center;
   margin: 0;
   margin-right: 140px;
-  padding: 0;
+  padding: 20px 17px;
   list-style-type: none;
   flex-wrap: wrap;
   width: 500px;
@@ -73,19 +80,18 @@ body {
 
 .navigation-user {
   display:flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 14px 0;
   list-style-type: none;
   width: 300px;
 }
 
 .navigation-link {
+  position: relative;
   display: block;
   margin: 0;
-  padding: 20px 17px;
   font-weight: 700;
   color: inherit;
   font-size: 20px;
@@ -93,18 +99,42 @@ body {
 }
 
 .navigation-userlink {
+  position: relative;
   display: block;
   margin: 0;
-  padding: 24px 12px;
+
   text-decoration: none;
 }
 
-.current-link {
-  text-decoration: underline;
+.favorite-count {
+  position: absolute;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  left: 24px;
+  top: 18px;
+  width: 20px;
+  height: 20px;
+  background-color: #7DB54F;
+  border-radius: 50%;
+  font-size: 10px;
+  line-height: 13px;
+  color: #ffffff;
 }
 
-.want-button {
-  width: 160px;
+.current-link::before {
+  position: absolute;
+  content: "";
+  width: 68px;
+  height: 0;
+  border: 2px solid #756257;
+  left: 256px;
+  top: 65px
+}
+/* поставить 12 в центре */
+
+.brown-button.want-button {
+  width: 130px;
   background-color: #756157;
   color: #ffffff;
   text-align: center;
@@ -115,7 +145,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   padding: 9px 15px;
-  margin-left: 20px;
+  margin: 0;
 }
 
 .main-header {
@@ -125,7 +155,6 @@ body {
   align-items: center;
   background-image: url("../images/index/welcome-block/index-background.jpg");
   min-height: 485px;
-  width: 100%;
   background-color: #ffffff;
   color: #000000;
   position: relative;
@@ -168,150 +197,106 @@ body {
 }
 
 /* advantages section */
-.advantages-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
+
+.advantages-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1200px;
 }
 
-.advantages-item-first {
-  width: 100%;
-  background-color: #82B3D3;
-  color: #ffffff;
-}
-
-.advantages-item-block {
-  display: flex;
-  width: 100%;
-}
-
-.advantages-item-block-second {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-
-.advantages-item-text {
+.advantages-text {
+  grid-column: 1/2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  width: 230px;
-  height: 200px;
+  background-color: #82B3D3;
+  color: #ffffff;
   padding: 92px 85px;
+  gap: 30px;
 }
 
-.advantages-item-title-first {
+.advantages-title {
   margin: 0;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
 }
 
-.advantages-item-description-first {
-  margin: 0;
-  font-size: 18px;
-  line-height: 21px;
+.advantages-image {
+  grid-column: 2 / -1;
+  object-fit: contain;
 }
 
 .advantages-options {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1/-1;
+  display: flex;
+  background-color: rgba(131, 179, 211, 0.12);
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.option-block {
   list-style-type: none;
-  padding: 80px 85px;
 }
 
-.option-block:nth-child(odd) {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.option-first-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-image: url("../images/index/adventages/adventage-1/adv-house.svg");
-  background-size: 75px 72px;
-  background-repeat: no-repeat;
-  width: 230px;
-  height: 225px;
-  background-position: top;
-}
-
-.option-second-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-image: url("../images/index/adventages/adventage-1/adv-food.svg");
-  background-size: 75px 72px;
-  background-repeat: no-repeat;
-  background-position: top;
-  width: 230px;
-  height: 225px;
-}
-
-.option-third-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-image: url("../images/index/adventages/adventage-1/adv-souveniers.svg");
-  background-size: 75px 72px;
-  background-repeat: no-repeat;
-  background-position: top;
-  width: 230px;
-  height: 225px;
-}
-
-.advantages-text-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 230px;
-  height: 180px;
-}
-
-.option-item-title {
-  margin: 0;
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
-  padding-bottom: 30px;
-}
-
-.advantages-block {
-  list-style-type: none;
-  padding: 103px 85px;
-}
-
-.advantages-block:nth-child(odd) {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.advantages-block:nth-child(4) {
-  background-color: rgba(131, 179, 211, 0.2);
-}
-
-.advantages-item-title {
-  margin: 0;
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
-}
-
-.advantages-item-description {
+.advantages-description {
   margin: 0;
   font-size: 18px;
   line-height: 21px;
+}
+
+.options-item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 182px 85px 81px;
+}
+
+.options-item:nth-child(1) {
+  background-image: url("../images/index/adventages/adventage-1/adv-house.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+}
+
+.options-item:nth-child(2) {
+  background-image: url("../images/index/adventages/adventage-1/adv-food.svg");
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+}
+
+.options-item:nth-child(3) {
+  background-image: url("../images/index/adventages/adventage-1/adv-souveniers.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+}
+
+.advantages-text-second {
+  grid-column: 3/-1;
+  display: flex;
+  flex-direction: column;
+  background-color: #82B3D3;
+  color: #ffffff;
+  padding: 92px 85px;
+  gap: 30px;
+}
+
+.advantages-image-second {
+  grid-column: 1 / 3;
+  object-fit: contain;
+}
+
+.advantages-else {
+  grid-column: 1/-1;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-card {
+  max-width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: rgba(131, 179, 211, 0.12);
+  padding: 103px 85px;
 }
 
 .search-block {
@@ -336,7 +321,8 @@ body {
   padding: 0;
 }
 
-.button {
+.brown-button {
+  display: inline-block;
   background-color: #756157;
   color: #ffffff;
   border: none;
@@ -400,6 +386,23 @@ body {
   margin: 0;
 }
 
+.blue-button {
+  display: inline-block;
+  background-color: #83B3D3;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  width: 575px;
+  cursor: pointer;
+  padding: 12px 15px;
+  margin-bottom: 95px;
+  font-family: "PT Sans";
+}
+
 .subscribe-button {
   background-color: #82B3D3;
   border-radius: 0 10px 10px 0;
@@ -418,7 +421,8 @@ body {
 /* footer */
 .page-footer {
   display: flex;
-  padding: 40px 70px 30px;
+  justify-content: space-between;
+  padding: 45px 70px 30px;
   align-items: center;
 }
 
@@ -428,18 +432,15 @@ body {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  margin-right: 42px;
 }
 
 .social-link {
   display: flex;
-  text-align: center;
-  margin: 0;
   padding: 13px 12px;
+  color:#83B3D3;
 }
 
 .footer-phone-call {
-  padding: 5px 195px;
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
@@ -447,9 +448,8 @@ body {
   text-decoration: none;
 }
 
-.about-link {
-  display: block;
-  margin: 8px 0 8px auto;
+.author-link {
+  color: #000000;
 }
 
 /* catalog.html */
@@ -457,8 +457,9 @@ body {
 
  .filter-image {
   background-image: url("../images/catalog/hotels-search/filter-background.jpg");
-  background-color: #ffffff;
-  color:#000000;
+  background-color: #000000;
+  color:#ffffff;
+  background-size: 100%;
   width: 100%;
   background-repeat: no-repeat;
   padding: 0;
@@ -572,25 +573,27 @@ body {
 
 .sort-type {
   display: flex;
-  margin: 0 auto 56px auto;
+  align-items:center;
+  margin-bottom: 56px;
 }
 
 .sort-title {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  margin-right: 191px;
+  margin-right: auto;
 }
 
 .sort-selector {
+  display: flex;
+  align-items: center;
   border: 2px solid #E5E5E5;
-  height: 48px;
   padding: 14px 0 14px 20px;
   border-radius: 4px;
   font-size: 18px;
-  line-height: 21px;
   margin-right: 78px;
   width: 290px;
+  font-family: "PT Sans", sans-serif;
 }
 
 .sort-list {
@@ -604,12 +607,33 @@ body {
 }
 
 .sort-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 48px;
   height: 48px;
+  padding: 17px 16px;
   box-sizing: border-box;
-  border: 2px solid #000000;
+  border: 2px solid #E5E5E5;
   border-radius: 4px;
-  align-items: center;
+}
+
+.table {
+  background-image: url("../images/catalog/sort-panel/icon-table-filter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slide {
+  background-image: url("../images/catalog/sort-panel/icon-slideshow-search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.list {
+  background-image: url("../images/catalog/sort-panel/icon-list-search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .catalog-list {
@@ -657,7 +681,6 @@ body {
 
 .button-link {
   width: 110px;
-  height: 30px;
   padding: 8px 15px;
   margin: 0;
   text-decoration: none;
@@ -676,6 +699,23 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+}
+
+.green-button {
+  display: inline-block;
+  background-color: #756157;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  width: 575px;
+  cursor: pointer;
+  padding: 12px 15px;
+  margin-bottom: 95px;
+  font-family: "PT Sans";
 }
 
 .button-favorited {
@@ -730,35 +770,44 @@ body {
 
 .pagination {
   display: flex;
+  align-items: center;
 }
 
 .pagination-list {
   display: flex;
-  align-items: center;
+  justify-content: center;
   list-style-type: none;
-  gap: 8px;
-  padding: 0;
+  flex-wrap: wrap;
   margin: 0;
-  margin-right: 270px;
-  width: 400px;
+  margin-right: auto;
+  padding: 0;
+  gap: 8px;
 }
 
-.button-pagination-current {
+.pagination-item {
+  display: flex;
   width: 60px;
-  height: 100%;
-  padding: 12px 24px;
+}
+
+.pagination-current {
+  display: flex;
+  padding: 11px 18px;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  margin: 0;
+  border-radius: 4px;
+  text-decoration: none;
   background-color: #F2F2F2;
   color: #000000;
-  font-size: 20px;
-  line-height: 36px;
 }
 
 .button-pagination {
+  display: flex;
+  padding: 11px 18px;
+  justify-content: center;
   width: 60px;
-  padding: 12px 24px;
-  background-color: #82B3D3;
-  font-size: 20px;
-  line-height: 36px;
+  margin: 0;
   text-decoration: none;
 }
 
@@ -771,18 +820,122 @@ body {
  }
 
  .pagination-results {
-  display: flex;
-  align-items: center;
+  height: 49px;
   width: 160px;
   padding: 14px 20px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   line-height: 21px;
   font-size: 18px;
+  font-family: "PT Sans", sans-serif;
  }
 
- /* .subscribe {
-   background-image: none;
+ /* button styles */
+ .brown-button:hover,
+ .brown-button:focus {
+  transition: 0.3s;
+  background-color: #615048;
  }
- не понял как убрать картинку в этом блоке, на странице с каталогом
- */
+
+ .brown-button:active {
+  transition: 0.3s;
+  background-color: #756157;
+  color: hsla(0, 0%, 100%, 0.3);
+ }
+
+.brown-button:disabled {
+  background-color: #E5E5E5;
+}
+
+.blue-button:hover,
+.blue-button:focus {
+  transition: 0.3s;
+  background-color: #68A2CA;
+}
+
+.blue-button:active {
+  transition: 0.3s;
+  background-color: #82B3D3;
+  color: hsla(0, 0%, 100%, 0.3);
+}
+
+.blue-button:disabled {
+  background-color: #E5E5E5;
+}
+
+.green-button:hover,
+.green-button:focus {
+  transition: 0.3s;
+  background-color: #6C9E42;
+}
+
+.green-button:active {
+  transition: 0.3s;
+  background-color: #7DB54F;
+  color: hsla(0, 0%, 100%, 0.3);
+}
+
+.green-button:disabled {
+  background-color: #E5E5E5;
+}
+
+.button-pagination:hover,
+.blue-pagination:focus {
+  transition: 0.3s;
+  background-color: #68A2CA;
+}
+
+.blue-pagination:active {
+  transition: 0.3s;
+  color: hsla(0, 0%, 100%, 0.3);
+}
+
+.social-link:hover,
+.social-link:focus {
+  transition: 0.3s;
+  color:#68A2CA;
+}
+
+.social-link:active {
+  transition: 0.3s;
+  color: rgba(104, 162, 202, 0.3);
+}
+
+.footer-phone-call:hover,
+.footer-phone-call:focus {
+  transition: 0.5s;
+  color: #756157;
+}
+
+.footer-phone-call:active {
+  transition: 0.5s;
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.author-link:hover,
+.author-link:focus {
+  transition: 0.5s;
+  color: #756157;
+}
+
+.author-link:active {
+  transition: 0.5s;
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.sort-button:hover,
+.sort-button:active {
+  transition: 0.3s;
+  border: 2px solid #000000;
+}
+
+.sort-button:focus {
+  transition: 0.3s;
+  border: 2px solid #68A2CA;
+}
+
+.breadcrubs:hover,
+.breadcrubs:active {
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.6);
+}
