@@ -102,6 +102,7 @@ body {
   display: block;
   margin: 0;
   text-decoration: none;
+  color: #000000;
 }
 
 .favorite-count {
@@ -952,8 +953,30 @@ body {
   border: 2px solid #68A2CA;
 }
 
-.breadcrubs:hover,
-.breadcrubs:active {
+.breadcrubs-link:hover,
+.breadcrubs-link:active {
   transition: 0.3s;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.navigation-link:hover,
+.navigation-link:focus {
+  transition: 0.5s;
+  color: #756157;
+}
+
+.navigation-link:active {
+  transition: 0.5s;
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.navigation-userlink:hover,
+.navigation-userlink:focus {
+  transition: 0.5s;
+  color: #756157;
+}
+
+.navigation-userlink:active {
+  transition: 0.5s;
+  color: rgba(117, 97, 87, 0.3);
 }
