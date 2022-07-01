@@ -85,7 +85,6 @@ body {
 
 .navigation-link {
   display: inline-block;
-  width: 100%;
   margin: 0;
   font-weight: 700;
   color: inherit;
@@ -99,23 +98,23 @@ body {
 
 .navigation-user {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  width: 300px;
+  width: 310px;
 }
 
 .navigation-userlink {
-  display: block;
+  display: flex;
   position: relative;
   margin: 0;
   padding: 24px 12px;
   text-decoration: none;
   color: #000000;
   cursor: pointer;
-  height: 18px;
 }
 
 .favorite-count {
@@ -124,7 +123,7 @@ body {
   justify-content: center;
   align-items: center;
   left: 25px;
-  top: 17px;
+  top: 15px;
   width: 20px;
   height: 20px;
   background-color: #7DB54F;
@@ -141,14 +140,13 @@ body {
 .current-link::before {
   position: absolute;
   content: "";
-  width: 100%;
+  width: calc(100% - 36px);
   height: 0;
   border: 1px solid #756257;
   background-color: #756257;
-  left: 0;
-  top: 65px;
+  left: 17px;
+  top: 64px;
   z-index: 1;
-  /* правильно ли делать псевдоэлемент у ссылки? сама черточка становиться тоже ссылкой. */
 }
 
 .brown-button.want-button {
@@ -162,13 +160,14 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  padding: 9px 14px;
+  padding: 9px 15px;
   margin: 0;
   cursor: pointer;
-  margin-left: 18px;
+  margin-left: 21px;
 }
 
-.main-header {
+.main-picture {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,14 +176,24 @@ body {
   width: 100%;
   background-color: #ffffff;
   color: #000000;
-  position: relative;
   background-size: 100% auto;
   background-repeat: no-repeat;
   margin: 0;
   margin-top: -5px;
 }
 
-.main-header::before {
+.main-picture-title {
+  position: absolute;
+  content: "";
+  background-image: url(../images/index/welcome-block/welcome-text.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 51px;
+  left: 371px;
+}
+
+.main-picture::before {
   content:"";
   background-image: url("../images/index/welcome-block/divider-under-main.svg");
   position: absolute;
@@ -267,6 +276,7 @@ body {
   flex-direction: column;
   gap: 30px;
   padding: 182px 85px 81px;
+  width: 400px;
 }
 
 .options-item:nth-child(1) {
@@ -325,8 +335,11 @@ body {
 }
 
 .search-block {
-  padding-top: 90px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 91px 304px 93px;
+  max-width: 100%;
 }
 
 .search-title {
@@ -345,6 +358,7 @@ body {
   margin-bottom: 56px;
   padding: 0;
 }
+/* не совпадает с пикселем */
 
 .brown-button {
   display: inline-block;
@@ -356,10 +370,11 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
+}
+.button-search {
   width: 575px;
   cursor: pointer;
   padding: 12px 15px;
-  margin-bottom: 95px;
   font-family: "PT Sans";
 }
 
@@ -376,6 +391,8 @@ body {
 }
 
 .subcribe-block {
+  display: flex;
+  flex-direction: column;
   padding: 94px 0;
   margin: 0 auto;
   width: 800px;
@@ -387,7 +404,7 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 
 .subscribe-description {
@@ -410,6 +427,10 @@ body {
   font-size: 18px;
   line-height: 21px;
   margin: 0;
+}
+
+.subscribe-field {
+  width: 600px;
 }
 
 .blue-button {
@@ -482,6 +503,117 @@ body {
   cursor: pointer;
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  margin-top: 396px;
+  padding: 54px 70px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-reservation {
+  width: 575px;
+}
+
+.modal-close-button {
+  position: absolute;
+  width: 53px;
+  height: 53px;
+  border: none;
+  border-radius: 50%;
+  background-color: #F2F2F2;
+  top: 54px;
+  right: 70px;
+  padding: 0;
+  background-image: url(../images/modal/modal-close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 63px;
+  font-size: 30px;
+  line-height: 53px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: start;
+}
+
+.reservation-field {
+  display: flex;
+  align-items: center;
+  border: none;
+  margin: 0;
+  margin-bottom: 11px;
+  padding: 0;
+}
+
+.field-text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  padding: 0;
+  text-align: start;
+}
+
+.modal-field {
+  position: relative;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  border: none;
+  padding: 15px 19px 14px;
+  width: 382px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.search-results {
+  text-align: center;
+}
+
+.date-correct {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+  margin: 0;
+}
+
+.date-invalid {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FF5757;
+  margin: 0;
+}
+
+.modal-field.adults-count {
+  padding: 15px 19px;
+  width: 103px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+}
+
 /* catalog.html */
  /* filter-field */
 
@@ -528,19 +660,53 @@ body {
   line-height: 78px;
 }
 
-.breadcrubs {
+.breadcrumbs {
   display: flex;
   padding: 0;
+  padding-left: 2px;
   margin: 0;
   margin-bottom: 40px;
   list-style-type: none;
   font-size: 16px;
   line-height: 21px;
-  gap: 10px;
+}
+
+.breadcrumbs-item {
+  position: relative;
+  align-self: center;
+  margin-right: 25px;
+}
+
+.breadcrumbs-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 6.5px;
+  height: 9px;
+  background-image: url(../images/catalog/hotels-search/logo-arrow-bread.svg);
+  background-repeat: no-repeat;
+  top: 3px;
+  left: 23px;
+}
+
+.breadcrumbs-item:last-child {
+  margin: 0;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
+}
+
+.breadcrumbs-link {
+  display: flex;
+  align-self: center;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .catalog-filter {
   display: flex;
+  padding-bottom: 5px;
 }
 
 .catalog-filter-group {
@@ -551,39 +717,196 @@ body {
   border: 0;
 }
 
+.catalog-filter-group:nth-child(2) {
+  margin: 0;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: start;
+  padding: 0;
+}
+
 .catalog-filter-list {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.catalog-filter-title {
-  font-size: 20px;
-  line-height: 26px;
-  margin: 0;
-  padding-bottom: 30px;
-}
-
 .control {
+  display: block;
+  position: relative;
   font-size: 18px;
   line-height: 21px;
+  padding-left: 40px;
+}
+
+.control-check {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin: 0;
+  background-color: #ffffff;
+  top: 0;
+  left: 0.27%;
+  cursor: pointer;
+}
+
+.control-name {
+  cursor: pointer;
+}
+
+.control input[type="checkbox"]:checked + .control-check::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 13px;
+  height: 10px;
+  background-image: url(../images/catalog/hotels-search/control-checkbox-bird.svg);
+}
+
+.control-radio {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0;
+  background-color: #ffffff;
+  top: 0;
+  left: 0.27%;
+  cursor: pointer;
+}
+
+.control input[type="radio"]:checked + .control-radio::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
 }
 
 .catalog-price {
-  display: flex;
   padding: 0;
   margin: 0;
+  margin-right: 70px;
   margin-left: auto;
+  border: 0;
+}
+
+.catalog-price-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 34px;
+  text-align: start;
+  padding: 0;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: #ffffff91;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+}
+
+
+.toggle-min {
+  left: 0;
+  top: -8px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: 0;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  margin-bottom: 32px;
+  padding: 12px 0;
+}
+
+.range-wrapper-inputs::before {
+  position: absolute;
+  background-color: #ffffff;
+  content: "";
+  width: 48px;
+  height: 2px;
+  transform: rotate(90deg);
+  top: 22px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.catalog-filter-label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  font-size: 18px;
+  line-height: 21px;
+  max-width: 143px;
+  padding: 0 17px;
+  color: #ffffff;
+}
+
+.range-name {
+  opacity: 30%;
+}
+
+.range-input {
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+  padding: 0;
+  max-width: 90px;
+  color: #ffffff;
+  text-align: start;
 }
 
 .filter-buttons {
   align-self: flex-end;
   width: 160px;
-  margin-left: 70px;
   cursor: pointer;
+  padding: 0;
 }
 
 .button-accept {
@@ -597,6 +920,13 @@ body {
   cursor: pointer;
 }
 
+.button-decline {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
 .main-catalog {
   display: flex;
   flex-direction: column;
@@ -604,7 +934,7 @@ body {
   flex-wrap: wrap;
 }
 
-.sort-type {
+.sort-panel {
   display: flex;
   align-items:center;
   margin-bottom: 56px;
@@ -614,19 +944,35 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin-right: 191px;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.sorting-type {
+  width: 290px;
   margin-right: auto;
 }
 
-.sort-selector {
+.select-control {
+  width: 100%;
   display: flex;
   align-items: center;
   border: 2px solid #E5E5E5;
-  padding: 14px 0 14px 20px;
+  font: inherit;
+  padding: 12px 20px;
+  padding-right: 54px;
   border-radius: 4px;
-  font-size: 18px;
-  margin-right: 78px;
-  width: 290px;
-  font-family: "PT Sans", sans-serif;
+  background-image: url(../images/catalog/sort-panel/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 22px center;
+  appearance: none;
 }
 
 .sort-list {
@@ -650,6 +996,7 @@ body {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
 .table {
@@ -857,16 +1204,9 @@ body {
   margin-right: 51px;
  }
 
- .pagination-results {
-  height: 49px;
+ .pagination-select {
   width: 160px;
-  padding: 14px 20px;
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
-  line-height: 21px;
-  font-size: 18px;
-  font-family: "PT Sans", sans-serif;
- }
+}
 
  /* button styles */
  .brown-button:hover,
@@ -949,32 +1289,9 @@ body {
   transition: 0.5s;
   color: rgba(117, 97, 87, 0.3);
 }
+/* catalog.html */
 
-.sort-button:hover,
-.sort-button:active {
-  transition: 0.3s;
-  border: 2px solid #000000;
-}
-
-.pagination-current:hover,
-.pagination-current:active,
-.pagination-current:focus {
-  border: none;
-  background-color: #F2F2F2;
-  color:#000000;
-}
-
-.sort-button:focus {
-  transition: 0.3s;
-  border: 2px solid #68A2CA;
-}
-
-.breadcrubs-link:hover,
-.breadcrubs-link:active {
-  transition: 0.3s;
-  color: rgba(255, 255, 255, 0.6);
-}
-
+/* navigation-panel */
 .navigation-link:hover,
 .navigation-link:focus {
   transition: 0.5s;
@@ -997,13 +1314,125 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
+/* main-catalog */
+.sort-button:hover,
+.sort-button:focus {
+  transition: 0.3s;
+  border: 2px solid #000000;
+}
+
+.sort-button:active {
+  transition: 0.3s;
+  border: 2px solid #68A2CA;
+}
+
+.pagination-current:hover,
+.pagination-current:active,
+.pagination-current:focus {
+  border: none;
+  background-color: #F2F2F2;
+  color:#000000;
+}
+
+
+/* subscribe */
 .field:hover,
 .field:focus {
   transition: 0.5s;
-  background-color: #E5E5E5;
+  background-color: rgb(130, 179, 211);
 }
 
 .field:active {
   transition: 0.5s;
   outline: 2px solid #000000;
+}
+
+.field:disabled {
+  background-color: #e6e6e62f;
+}
+
+.field:invalid {
+  transition: 0.5s;
+  color: #FF5757;
+}
+
+/* control panel catalog.html */
+.breadcrumbs-link:hover {
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-image:hover {
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.range-toggle:hover {
+  transition: 0.5s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  transition: 0.5s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  outline: 3px solid #83B3D3;
+}
+
+.range-toggle:active {
+  transition: 0.5s;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+  outline: 2px solid #83B3D3;
+}
+
+.control:hover .control-check {
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control:focus .control-check {
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83B3D3;
+}
+/* почему то фокус не ловитcя */
+
+.control:active .control-check {
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control input:disabled + .control-check {
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.control:focus .control-radio {
+  transition: 0.3s;
+  outline: 3px solid #83B3D3;
+}
+
+.control input:disabled + .control-radio {
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.select-control:hover,
+.select-control:focus {
+  transition: 0.3s;
+  border-color: #68A2CA;
+}
+
+.select-control:active {
+  transition: 0.3s;
+  border-color: #3f5e72;
+}
+
+.select-control:disabled {
+  transition: 0.3s;
+  border-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
