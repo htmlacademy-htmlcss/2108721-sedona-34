@@ -503,6 +503,8 @@ body {
   cursor: pointer;
 }
 
+/* modal-window */
+
 .modal-container {
   position: fixed;
   top: 0;
@@ -513,7 +515,7 @@ body {
   background-color: rgba(242, 242, 242, 0.8);;
 }
 
-.modal {
+.modal-reservation {
   position: relative;
   margin: auto;
   margin-top: 396px;
@@ -522,13 +524,14 @@ body {
   border-radius: 30px;
 }
 
-.modal-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-reservation {
-  width: 575px;
+.modal-title {
+  margin: 0;
+  margin-bottom: 63px;
+  font-size: 30px;
+  line-height: 53px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: start;
 }
 
 .modal-close-button {
@@ -547,73 +550,96 @@ body {
   cursor: pointer;
 }
 
-.modal-title {
-  margin: 0;
-  margin-bottom: 63px;
-  font-size: 30px;
-  line-height: 53px;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: start;
-}
-
-.reservation-field {
+.modal-content {
   display: flex;
-  align-items: center;
-  border: none;
-  margin: 0;
-  margin-bottom: 11px;
-  padding: 0;
+  flex-direction: column;
+  width: 575px;
 }
 
-.field-text {
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 50px;
+  margin: 0;
+}
+
+.reservation-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+}
+
+.reservation-field {
+  background-image: url(../images/modal/modal-calendar.svg);
+  background-repeat: no-repeat;
+  background-position: top 18px right 17px;
+  display: inline;
+  width: 352px;
+  padding: 15px 49px 15px 19px;
+  border-radius: 4px;
+}
+
+/* в состоянии active исчезает картинка календаря */
+
+.reservation-notice {
+  margin-left: 155px;
+  margin-bottom: 11px;
+}
+
+.notice {
+  margin: 0;
   padding: 0;
   text-align: start;
-}
-
-.modal-field {
-  position: relative;
-  background-color: #F2F2F2;
-  border-radius: 4px;
-  border: none;
-  padding: 15px 19px 14px;
-  width: 382px;
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-}
-
-.search-results {
-  text-align: center;
-}
-
-.date-correct {
-  font-weight: 400;
   font-size: 16px;
   line-height: 21px;
+}
+
+.correct-notice {
   color: #333333;
-  margin: 0;
 }
 
-.date-invalid {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
+.invalid-notice {
   color: #FF5757;
+}
+
+.reservation-people {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.people-title {
   margin: 0;
 }
 
-.modal-field.adults-count {
-  padding: 15px 19px;
-  width: 103px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 21px;
+.placeholder-button {
+  width: 25px;
+  height: 25px;
+  background-color: #83B3D3;
+  border-radius: 50%;
+  border: none;
+  color: #ffffff
 }
 
+.people-field {
+  width: 31px;
+  padding: 15px 51px;
+  border-radius: 4px;
+}
+
+.modal-search {
+  padding: 12px 26px;
+  border-radius: 10px;
+  margin: 0;
+}
 /* catalog.html */
  /* filter-field */
 
@@ -1233,7 +1259,7 @@ body {
 
 .blue-button:active {
   transition: 0.3s;
-  background-color: #82B3D3;
+  background-color: #68A2CA;
   color: hsla(0, 0%, 100%, 0.3);
 }
 
@@ -1336,14 +1362,20 @@ body {
 
 
 /* subscribe */
-.field:hover,
+.field:hover {
+  transition: 0.5s;
+  background-color: #E6E6E6;
+}
+
 .field:focus {
   transition: 0.5s;
-  background-color: rgb(130, 179, 211);
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
 }
 
 .field:active {
   transition: 0.5s;
+  background: #FFFFFF;
   outline: 2px solid #000000;
 }
 
@@ -1435,4 +1467,24 @@ body {
   transition: 0.3s;
   border-color: rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-close-button:hover {
+  transition: 0.5s;
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  transition: 0.5s;
+  outline: 3px solid #83B3D3;
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:active {
+  background-color: #E6E6E6;
+  opacity: 30%;
+}
+
+.modal-search:focus {
+  outline: 3px solid #756257;
 }

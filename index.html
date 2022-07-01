@@ -185,40 +185,40 @@
       </footer>
     </div>
     <div class="modal-container">
-      <form class="modal modal-reservation" action="https://echo.htmlacademy.ru/" method="post" id="modal">
+      <div class="modal-reservation" >
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
         </button>
-        <div class="modal-content">
+        <section class="modal-content">
           <h2 class="modal-title">Поиск гостинницы в Седоне</h2>
-          <fieldset class="reservation-field" action="https://echo.htmlacademy.ru/" method="post">
-            <legend class="field-text">Дата Заезда:
-              <input class="modal-field arrive-date" name="arrive-date" id="arrive" placeholder="27 апреля 2020"
-                type="text">
-              <div class="search-results">
+          <form class="reservation-form"  action="https://echo.htmlacademy.ru/" method="post">
+            <p class="reservation-date">
+              <label class="reservation-title">Дата Заезда:</label>
+              <input class="reservation-field field" type="text" id="arrive-date" name="arrive-date" placeholder="21 апреля 2020">
+              <div class="reservation-notice">
                 <p class="visually-hidden">На эти даты есть свободные номера. Пока есть.</p>
-                <p class="date-invalid">Мы не можем отправить вас в прошлое.</p>
+                <p class="notice invalid-notice">Мы не можем отправить вас в прошлое.</p>
               </div>
-            </legend>
-          </fieldset>
-          <fieldset class="reservation-field" action="https://echo.htmlacademy.ru/" method="post">
-            <legend class="field-text">Дата Выезда:
-              <input class="modal-field departure-date" name="departure-date" id="departure"
-                placeholder="1 сентября 2021" type="text">
-              <div class="search-results">
-                <p class="date-correct">На эти даты есть свободные номера. Пока есть.</p>
+            </p>
+            <p class="reservation-date">
+              <label class="reservation-title">Дата Выезда:</label>
+              <input class="reservation-field field" type="text" id="arrive-date" name="arrive-date" placeholder="1 сентября 2021">
+              <div class="reservation-notice">
+                <p class="notice correct-notice">На эти даты есть свободные номера. Пока есть.</p>
                 <p class="visually-hidden">Мы не можем отправить вас в прошлое.</p>
               </div>
-            </legend>
-          </fieldset>
-          <fieldset class="reservation-field" action="https://echo.htmlacademy.ru/" method="post">
-            <legend class="field-text">Взрослые:
-              <button class=""></button>
-              <input class="modal-field adults-count" name="adults-count" placeholder="2" type="number">
-            </legend>
-          </fieldset>
-        </div>
-      </form>
+            </p>
+            <p class="reservation-people">
+              <label class="reservation-title people-title">Взрослые:</label>
+              <input class="people-field field" type="number" id="people-count" name="people-count" placeholder="2">
+              <label class="reservation-title people-title">Дети:</label>
+              <button class="placeholder-button" type="button">i</button>
+              <input class="people-field field" type="number" id="people-count" name="people-count" placeholder="1">
+            </p>
+            <button class="blue-button modal-search">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 
