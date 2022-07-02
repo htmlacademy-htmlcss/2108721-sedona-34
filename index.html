@@ -184,38 +184,42 @@
         </a>
       </footer>
     </div>
-    <div class="modal-container">
-      <div class="modal-reservation" >
-        <button class="modal-close-button">
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-reservation">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостинницы в Седоне</h2>
-          <form class="reservation-form"  action="https://echo.htmlacademy.ru/" method="post">
-            <p class="reservation-date">
-              <label class="reservation-title">Дата Заезда:</label>
-              <input class="reservation-field field" type="text" id="arrive-date" name="arrive-date" placeholder="21 апреля 2020">
+          <form class="reservation-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="reservation-date">
+              <label class="reservation-title" for="arrive-date">Дата Заезда:</label>
+              <input class="reservation-field field" type="text" id="arrive-date" name="arrive"
+                placeholder="21 апреля 2020">
               <div class="reservation-notice">
                 <p class="visually-hidden">На эти даты есть свободные номера. Пока есть.</p>
                 <p class="notice invalid-notice">Мы не можем отправить вас в прошлое.</p>
               </div>
-            </p>
-            <p class="reservation-date">
-              <label class="reservation-title">Дата Выезда:</label>
-              <input class="reservation-field field" type="text" id="arrive-date" name="arrive-date" placeholder="1 сентября 2021">
+            </div>
+            <div class="reservation-date">
+              <label class="reservation-title" for="arrive-date">Дата Выезда:</label>
+              <input class="reservation-field field" type="text" id="arrive-date" name="arrive"
+                placeholder="1 сентября 2021">
               <div class="reservation-notice">
                 <p class="notice correct-notice">На эти даты есть свободные номера. Пока есть.</p>
                 <p class="visually-hidden">Мы не можем отправить вас в прошлое.</p>
               </div>
-            </p>
-            <p class="reservation-people">
-              <label class="reservation-title people-title">Взрослые:</label>
-              <input class="people-field field" type="number" id="people-count" name="people-count" placeholder="2">
-              <label class="reservation-title people-title">Дети:</label>
-              <button class="placeholder-button" type="button">i</button>
-              <input class="people-field field" type="number" id="people-count" name="people-count" placeholder="1">
-            </p>
-            <button class="blue-button modal-search">Найти</button>
+            </div>
+            <div class="reservation-people">
+              <label class="reservation-title people-title" for="people-count">Взрослые:</label>
+              <input class="people-field field" type="number" id="people-count" name="people" placeholder="2">
+              <label class="reservation-title people-title" for="people-count">Дети:</label>
+              <span class="tooltip-button">
+                <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+              <input class="people-field field" type="number" id="people-count" name="people" placeholder="1">
+            </div>
+            <button class="blue-button modal-search" type="button">Найти</button>
           </form>
         </section>
       </div>

@@ -275,27 +275,27 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 182px 85px 81px;
+  padding: 184px 85px 81px;
   width: 400px;
 }
 
 .options-item:nth-child(1) {
   background-image: url("../images/index/adventages/adventage-1/adv-house.svg");
   background-repeat: no-repeat;
-  background-position: 50% 25%;
+  background-position: 50.5% 25.7%;
 }
 
 .options-item:nth-child(2) {
   background-image: url("../images/index/adventages/adventage-1/adv-food.svg");
   background-color: #ffffff;
   background-repeat: no-repeat;
-  background-position: 50% 25%;
+  background-position: 50.2% 25.8%;
 }
 
 .options-item:nth-child(3) {
   background-image: url("../images/index/adventages/adventage-1/adv-souveniers.svg");
   background-repeat: no-repeat;
-  background-position: 50% 25%;
+  background-position: 50.2% 25.6%;
 }
 
 .advantages-text-second {
@@ -304,7 +304,7 @@ body {
   flex-direction: column;
   background-color: #82B3D3;
   color: #ffffff;
-  padding: 92px 85px;
+  padding: 90px 85px;
   gap: 30px;
 }
 
@@ -327,7 +327,7 @@ body {
   flex-direction: column;
   gap: 30px;
   background-color: rgba(131, 179, 211, 0.12);
-  padding: 103px 85px;
+  padding: 101px 85px 102px;
 }
 
 .advantages-card:nth-child(2) {
@@ -393,7 +393,7 @@ body {
 .subcribe-block {
   display: flex;
   flex-direction: column;
-  padding: 94px 0;
+  padding: 95px 0;
   margin: 0 auto;
   width: 800px;
 }
@@ -430,7 +430,7 @@ body {
 }
 
 .subscribe-field {
-  width: 600px;
+  width: 560px;
 }
 
 .blue-button {
@@ -451,6 +451,7 @@ body {
 }
 
 .subscribe-button {
+  display: inline-block;
   background-color: #82B3D3;
   border-radius: 0 10px 10px 0;
   border: none;
@@ -470,7 +471,7 @@ body {
 .page-footer {
   display: flex;
   justify-content: space-between;
-  padding: 45px 70px 30px;
+  padding: 40px 70px 30px;
   align-items: center;
 }
 
@@ -484,7 +485,7 @@ body {
 
 .social-link {
   display: flex;
-  padding: 13px 12px;
+  padding: 10px 13px 16px;
   color:#83B3D3;
   cursor: pointer;
 }
@@ -496,11 +497,14 @@ body {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  padding: 2px 0 9px 2px;
 }
 
 .author-link {
   color: #000000;
   cursor: pointer;
+  padding: 8px 0 9px;
+  text-decoration: none;
 }
 
 /* modal-window */
@@ -515,6 +519,10 @@ body {
   background-color: rgba(242, 242, 242, 0.8);;
 }
 
+.modal-container-close {
+  display: none;
+}
+
 .modal-reservation {
   position: relative;
   margin: auto;
@@ -522,6 +530,8 @@ body {
   padding: 54px 70px 70px;
   background-color: #ffffff;
   border-radius: 30px;
+  width: 575px;
+  text-align: start;
 }
 
 .modal-title {
@@ -553,7 +563,6 @@ body {
 .modal-content {
   display: flex;
   flex-direction: column;
-  width: 575px;
 }
 
 .reservation-form {
@@ -562,9 +571,7 @@ body {
 }
 
 .reservation-date {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  grid-template-columns: 1fr 2fr;
   line-height: 50px;
   margin: 0;
 }
@@ -572,7 +579,7 @@ body {
 .reservation-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 50px;
 }
 
 .reservation-field {
@@ -583,9 +590,9 @@ body {
   width: 352px;
   padding: 15px 49px 15px 19px;
   border-radius: 4px;
+  margin-left: auto;
 }
-
-/* в состоянии active исчезает картинка календаря */
+/* как отодвинуть инпут поле от заголовка на разные отступы? */
 
 .reservation-notice {
   margin-left: 155px;
@@ -598,6 +605,7 @@ body {
   text-align: start;
   font-size: 16px;
   line-height: 21px;
+  padding-top: 10px;
 }
 
 .correct-notice {
@@ -618,21 +626,49 @@ body {
 
 .people-title {
   margin: 0;
+  line-height: 50px;
 }
 
-.placeholder-button {
+.tooltip-button {
+  position: relative;
   width: 25px;
   height: 25px;
   background-color: #83B3D3;
+  background-image: url(../images/modal/modal-info.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 50%;
   border: none;
-  color: #ffffff
+  margin: 0 14px 0 5px;
+}
+
+.tooltip-text {
+  position: absolute;
+  width: 216px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background-color: #000000;
+  border-radius: 10px;
+  text-transform: none;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  padding: 15px 18px 18px 22px;
+  left: -115px;
+  top: 31px;
 }
 
 .people-field {
+  position: relative;
   width: 31px;
   padding: 15px 51px;
   border-radius: 4px;
+  text-align: center;
+}
+
+.people-field::-webkit-outer-spin-button,
+.people-field::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .modal-search {
@@ -652,6 +688,7 @@ body {
   background-repeat: no-repeat;
   padding: 0;
   flex-grow: 1;
+  margin-bottom: 5px;
 }
 
 .filter-form {
@@ -732,7 +769,6 @@ body {
 
 .catalog-filter {
   display: flex;
-  padding-bottom: 5px;
 }
 
 .catalog-filter-group {
@@ -760,7 +796,6 @@ body {
 .catalog-filter-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
   padding: 0;
   margin: 0;
@@ -772,7 +807,15 @@ body {
   position: relative;
   font-size: 18px;
   line-height: 21px;
-  padding-left: 40px;
+  padding-left: 41px;
+}
+
+.control-item {
+  margin-bottom: 15px;
+}
+
+.control-item:nth-child(3) {
+  margin-bottom: 0;
 }
 
 .control-check {
@@ -783,7 +826,7 @@ body {
   margin: 0;
   background-color: #ffffff;
   top: 0;
-  left: 0.27%;
+  left: 1px;
   cursor: pointer;
 }
 
@@ -809,7 +852,7 @@ body {
   margin: 0;
   background-color: #ffffff;
   top: 0;
-  left: 0.27%;
+  left: 2px;
   cursor: pointer;
 }
 
@@ -865,15 +908,14 @@ body {
   padding: 0;
 }
 
-
 .toggle-min {
-  left: 0;
+  left: -1px;
   top: -8px;
 }
 
 .toggle-max {
   top: -8px;
-  right: 0;
+  right: -9px;
 }
 
 .range-wrapper-inputs {
@@ -882,8 +924,8 @@ body {
   justify-content: center;
   border: 2px solid #ffffff;
   border-radius: 4px;
-  margin-bottom: 32px;
-  padding: 12px 0;
+  margin-bottom: 28px;
+  padding: 12px 0 11px;
 }
 
 .range-wrapper-inputs::before {
@@ -929,10 +971,10 @@ body {
 }
 
 .filter-buttons {
-  align-self: flex-end;
   width: 160px;
   cursor: pointer;
   padding: 0;
+  align-self: flex-end;
 }
 
 .button-accept {
@@ -941,7 +983,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   padding: 14px 15px;
   cursor: pointer;
 }
@@ -956,7 +998,7 @@ body {
 .main-catalog {
   display: flex;
   flex-direction: column;
-  padding: 50px 71px 25px 71px;
+  padding: 50px 71px 25px 72px;
   flex-wrap: wrap;
 }
 
@@ -997,7 +1039,7 @@ body {
   border-radius: 4px;
   background-image: url(../images/catalog/sort-panel/select-arrow.svg);
   background-repeat: no-repeat;
-  background-position: right 22px center;
+  background-position: right 11px top 12px;
   appearance: none;
 }
 
@@ -1017,7 +1059,6 @@ body {
   align-items: center;
   width: 48px;
   height: 48px;
-  padding: 17px 16px;
   box-sizing: border-box;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -1026,21 +1067,22 @@ body {
 }
 
 .table {
+  border-color: #000000;
   background-image: url("../images/catalog/sort-panel/icon-table-filter.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left 14px top 14px;
 }
 
 .slide {
   background-image: url("../images/catalog/sort-panel/icon-slideshow-search.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left 14px top 14px;
 }
 
 .list {
   background-image: url("../images/catalog/sort-panel/icon-list-search.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left 14px top 14px;
 }
 
 .catalog-list {
@@ -1057,8 +1099,8 @@ body {
   display: flex;
   flex-direction: column;
   text-align: start;
-  gap: 16px;
-  padding: 20px;
+  gap: 15px;
+  padding: 20px 20px 19px;
 }
 
 .catalog-item-image {
@@ -1171,7 +1213,7 @@ body {
 
 .divider {
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   display: block;
   content: "";
   border: 1px solid #E6E6E6;
@@ -1223,11 +1265,10 @@ body {
 }
 
  .hotel-onpage {
-  align-self: center;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  margin-right: 51px;
+  margin-right: 53px;
  }
 
  .pagination-select {
@@ -1363,18 +1404,15 @@ body {
 
 /* subscribe */
 .field:hover {
-  transition: 0.5s;
   background-color: #E6E6E6;
 }
 
 .field:focus {
-  transition: 0.5s;
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
 }
 
 .field:active {
-  transition: 0.5s;
   background: #FFFFFF;
   outline: 2px solid #000000;
 }
