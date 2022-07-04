@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
   </head>
 
   <body class="page-content">
@@ -23,7 +26,7 @@
               <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li>
-              <a class="navigation-link current-link" href="catalog.html">Гостиницы</a>
+              <a class="navigation-link current-link">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-user">
@@ -60,8 +63,7 @@
       <main>
         <div class="filter-image">
           <div class="filter-form">
-            <h1 class="visually-hidden">Выбор гостинницы</h1>
-            <strong class="filter-title">Гостиницы Седоны</strong>
+            <h1 class="filter-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="index.html">
@@ -84,21 +86,21 @@
                   <li class="control-item">
                     <label class="control">
                       <input class="visually-hidden" type="checkbox" name="swimming-pool" checked tabindex="0">
-                      <span class="control-check"></span>
+                      <span class="control-check" tabindex="0"></span>
                       <span class="control-name">Бассейн</span>
                     </label>
                   </li>
                   <li class="control-item">
                     <label class="control">
                       <input class="visually-hidden" type="checkbox" name="parking" checked tabindex="0">
-                      <span class="control-check"></span>
+                      <span class="control-check" tabindex="0"></span>
                       <span class="control-name">Парковка</span>
                     </label>
                   </li>
                   <li class="control-item">
                     <label class="control">
-                      <input class="visually-hidden" type="checkbox" name="wi-fi" tabindex="1">
-                      <span class="control-check"></span>
+                      <input class="visually-hidden" type="checkbox" name="wi-fi">
+                      <span class="control-check" tabindex="0"></span>
                       <span class="control-name">Wi-Fi</span>
                     </label>
                   </li>
@@ -110,21 +112,21 @@
                   <li class="control-item">
                     <label class="control">
                       <input class="visually-hidden" type="radio" name="housing-type" value="hotel" checked>
-                      <span class="control-radio"></span>
+                      <span class="control-radio" tabindex="0"></span>
                       <span class="control-name">Гостиница</span>
                     </label>
                   </li>
                   <li class="control-item">
                     <label class="control">
                       <input class="visually-hidden" type="radio" name="housing-type" value="motel">
-                      <span class="control-radio"></span>
+                      <span class="control-radio" tabindex="0"></span>
                       <span class="control-name">Мотель</span>
                     </label>
                   </li>
                   <li class="control-item">
                     <label class="control">
                       <input class="visually-hidden" type="radio" name="housing-type" value="apartments">
-                      <span class="control-radio"></span>
+                      <span class="control-radio" tabindex="0"></span>
                       <span class="control-name">Апартаменты</span>
                     </label>
                   </li>
@@ -132,32 +134,30 @@
               </fieldset>
               <fieldset class="catalog-price">
                 <legend class="catalog-price-title">Стоимость, ₽:</legend>
-                <div class="range">
-                  <div class="range-wrapper-inputs">
-                    <label class="catalog-filter-label">
-                      <span class="range-name">от</span>
-                      <input class="range-input" type="number" value="0" name="min-price">
-                    </label>
-                    <label class="catalog-filter-label">
-                      <span class="range-name">до</span>
-                      <input class="range-input" type="number" value="9000" name="min-price">
-                    </label>
+                <div class="catalog-price-inputs">
+                  <div class="catalog-price-form">
+                    <label class="catalog-price-label">от</label>
+                    <input class="price-input input-from" type="number" value="0" name="min-price">
                   </div>
-                  <div class="range-scale">
-                    <div class="range-bar" style="left: 0; width: 227px">
-                      <button class="range-toggle toggle-min" type="button">
-                        <span class="visually-hidden">изменить минимальную цену</span>
-                      </button>
-                      <button class="range-toggle toggle-max" type="button">
-                        <span class="visually-hidden">изменить максимальную цену</span>
-                      </button>
-                    </div>
+                  <div class="catalog-price-form">
+                    <label class="catalog-price-label">до</label>
+                    <input class="price-input input-to" type="number" value="9000" name="min-price">
+                  </div>
+                </div>
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0; width: 227px">
+                    <button class="range-toggle toggle-min" type="button">
+                      <span class="visually-hidden">изменить минимальную цену</span>
+                    </button>
+                    <button class="range-toggle toggle-max" type="button">
+                      <span class="visually-hidden">изменить максимальную цену</span>
+                    </button>
                   </div>
                 </div>
               </fieldset>
               <div class="filter-buttons">
                 <button class="blue-button button-accept" type="submit">Применить</button>
-                <span class="button-decline">Сбросить</span>
+                <span class="button-decline" tabindex="0">Сбросить</span>
               </div>
             </form>
           </div>
@@ -314,11 +314,11 @@
           </div>
         </section>
         <div class="subcribe-block">
-          <h2 class="subscribe-title  е">Подпишитесь на рассылку</h2>
+          <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
           <p class="subscribe-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-            <input class="field subscribe-field" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" type="email"
-              required>
+            <input class="field subscribe-field" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail"
+              type="email" required>
             <button class="blue-button subscribe-button" type="submit">подписаться</button>
           </form>
         </div>
@@ -369,6 +369,58 @@
           </svg>
         </a>
       </footer>
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-reservation">
+          <button class="modal-close-button" type="button" tabindex="0">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <form class="reservation-form" action="https://echo.htmlacademy.ru/" method="post">
+              <div class="reservation-date">
+                <label class="reservation-title" for="arrive-date">Дата Заезда:</label>
+                <input class="reservation-field field" type="text" id="arrive-date" name="arrive"
+                  placeholder="27 апреля 2020" required>
+                <div class="reservation-notice">
+                  <p class="notice correct-notice-arrive">На эти даты есть свободные номера. Пока есть.</p>
+                  <p class="notice invalid-notice-arrive">Мы не можем отправить вас в прошлое.</p>
+                </div>
+              </div>
+              <div class="reservation-date">
+                <label class="reservation-title" for="departure-date">Дата Выезда:</label>
+                <input class="reservation-field field" type="text" id="departure-date" name="departure"
+                  placeholder="1 сентября 2021" required>
+              </div>
+              <div class="reservation-notice">
+                <p class="notice correct-notice-departure">На эти даты есть свободные номера. Пока есть.</p>
+                <p class="notice invalid-notice-departure">Мы не можем отправить вас в прошлое.</p>
+              </div>
+              <div class="reservation-people">
+                <label class="reservation-title adults-title" for="adult-count">Взрослые:</label>
+                <div class="modal-reservation-button">
+                  <button class="button-minus" type="button"></button>
+                </div>
+                <input class="people-field field" type="number" id="adult-count" name="people" placeholder="2">
+                <div class="modal-reservation-button">
+                  <button class="button-plus" type="button"></button>
+                </div>
+                <label class="reservation-title children-title" for="children-count">Дети:</label>
+                <div class="tooltip-button" tabindex="0" data-title="Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
+                лет. Дети до 6 лет размещаются бесплатно.">
+                </div>
+                <div class="modal-reservation-button">
+                  <button class="button-minus" type="button"></button>
+                </div>
+                <input class="people-field field" type="number" id="children-count" name="people" placeholder="1">
+                <div class="modal-reservation-button">
+                  <button class="button-plus" type="button"></button>
+                </div>
+              </div>
+              <button class="blue-button modal-search" type="button">Найти</button>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 

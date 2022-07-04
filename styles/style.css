@@ -33,7 +33,7 @@ html {
 
 body {
   margin: 0 auto;
-  width: 1280px;
+  min-width: 1280px;
   min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
@@ -42,6 +42,8 @@ body {
   background-color: #F2F2F2;
   text-align: center;
 }
+
+/* У страницы должна быть минимальная ширина, чтобы у пользователей с меньшим разрешением при просмотре страницы оставались работоспособны все элементы сайта. */
 
 .page-container {
   width: 1200px;
@@ -81,6 +83,7 @@ body {
 
 .navigation-image {
   display: block;
+  border: none;
 }
 
 .navigation-link {
@@ -94,6 +97,7 @@ body {
   cursor: pointer;
   padding: 20px 17px;
   line-height: 26px;
+  transition: 0.3s;
 }
 
 .navigation-user {
@@ -115,6 +119,7 @@ body {
   text-decoration: none;
   color: #000000;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .favorite-count {
@@ -187,8 +192,8 @@ body {
   content: "";
   background-image: url(../images/index/welcome-block/welcome-text.svg);
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  width: 458px;
+  height: 352px;
   top: 51px;
   left: 371px;
 }
@@ -338,7 +343,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 91px 304px 93px;
+  padding: 90px 302px 93px;
   max-width: 100%;
 }
 
@@ -370,6 +375,7 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
+  transition: 0.3s;
 }
 .button-search {
   width: 575px;
@@ -393,7 +399,7 @@ body {
 .subcribe-block {
   display: flex;
   flex-direction: column;
-  padding: 95px 0;
+  padding: 94px 0;
   margin: 0 auto;
   width: 800px;
 }
@@ -427,6 +433,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   margin: 0;
+  transition: 0.3s;
 }
 
 .subscribe-field {
@@ -448,6 +455,7 @@ body {
   padding: 12px 15px;
   margin-bottom: 95px;
   font-family: "PT Sans";
+  transition: 0.3s;
 }
 
 .subscribe-button {
@@ -471,7 +479,7 @@ body {
 .page-footer {
   display: flex;
   justify-content: space-between;
-  padding: 40px 70px 30px;
+  padding: 41px 70px 30px;
   align-items: center;
 }
 
@@ -488,6 +496,7 @@ body {
   padding: 10px 13px 16px;
   color:#83B3D3;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .footer-phone-call {
@@ -498,6 +507,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   padding: 2px 0 9px 2px;
+  transition: 0.3s;
 }
 
 .author-link {
@@ -505,177 +515,9 @@ body {
   cursor: pointer;
   padding: 8px 0 9px;
   text-decoration: none;
+  transition: 0.3s;
 }
 
-/* modal-window */
-
-.modal-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(242, 242, 242, 0.8);;
-}
-
-.modal-container-close {
-  display: none;
-}
-
-.modal-reservation {
-  position: relative;
-  margin: auto;
-  margin-top: 396px;
-  padding: 54px 70px 70px;
-  background-color: #ffffff;
-  border-radius: 30px;
-  width: 575px;
-  text-align: start;
-}
-
-.modal-title {
-  margin: 0;
-  margin-bottom: 63px;
-  font-size: 30px;
-  line-height: 53px;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: start;
-}
-
-.modal-close-button {
-  position: absolute;
-  width: 53px;
-  height: 53px;
-  border: none;
-  border-radius: 50%;
-  background-color: #F2F2F2;
-  top: 54px;
-  right: 70px;
-  padding: 0;
-  background-image: url(../images/modal/modal-close.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-
-.modal-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.reservation-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.reservation-date {
-  grid-template-columns: 1fr 2fr;
-  line-height: 50px;
-  margin: 0;
-}
-
-.reservation-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 50px;
-}
-
-.reservation-field {
-  background-image: url(../images/modal/modal-calendar.svg);
-  background-repeat: no-repeat;
-  background-position: top 18px right 17px;
-  display: inline;
-  width: 352px;
-  padding: 15px 49px 15px 19px;
-  border-radius: 4px;
-  margin-left: auto;
-}
-/* как отодвинуть инпут поле от заголовка на разные отступы? */
-
-.reservation-notice {
-  margin-left: 155px;
-  margin-bottom: 11px;
-}
-
-.notice {
-  margin: 0;
-  padding: 0;
-  text-align: start;
-  font-size: 16px;
-  line-height: 21px;
-  padding-top: 10px;
-}
-
-.correct-notice {
-  color: #333333;
-}
-
-.invalid-notice {
-  color: #FF5757;
-}
-
-.reservation-people {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.people-title {
-  margin: 0;
-  line-height: 50px;
-}
-
-.tooltip-button {
-  position: relative;
-  width: 25px;
-  height: 25px;
-  background-color: #83B3D3;
-  background-image: url(../images/modal/modal-info.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-  border: none;
-  margin: 0 14px 0 5px;
-}
-
-.tooltip-text {
-  position: absolute;
-  width: 216px;
-  font-size: 16px;
-  line-height: 21px;
-  color: #FFFFFF;
-  background-color: #000000;
-  border-radius: 10px;
-  text-transform: none;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  padding: 15px 18px 18px 22px;
-  left: -115px;
-  top: 31px;
-}
-
-.people-field {
-  position: relative;
-  width: 31px;
-  padding: 15px 51px;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.people-field::-webkit-outer-spin-button,
-.people-field::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
-}
-
-.modal-search {
-  padding: 12px 26px;
-  border-radius: 10px;
-  margin: 0;
-}
 /* catalog.html */
  /* filter-field */
 
@@ -723,6 +565,7 @@ body {
   line-height: 78px;
 }
 
+/* breadcrumbs */
 .breadcrumbs {
   display: flex;
   padding: 0;
@@ -732,6 +575,7 @@ body {
   list-style-type: none;
   font-size: 16px;
   line-height: 21px;
+  transition: 0.3s;
 }
 
 .breadcrumbs-item {
@@ -766,7 +610,7 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
-
+/* catalog-filter */
 .catalog-filter {
   display: flex;
 }
@@ -801,7 +645,7 @@ body {
   margin: 0;
   list-style-type: none;
 }
-
+/* filter panel, checkbox, radio, range */
 .control {
   display: block;
   position: relative;
@@ -828,6 +672,7 @@ body {
   top: 0;
   left: 1px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .control-name {
@@ -854,6 +699,7 @@ body {
   top: 0;
   left: 2px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .control input[type="radio"]:checked + .control-radio::before {
@@ -870,7 +716,7 @@ body {
 .catalog-price {
   padding: 0;
   margin: 0;
-  margin-right: 70px;
+  margin-right: 71px;
   margin-left: auto;
   border: 0;
 }
@@ -906,6 +752,7 @@ body {
   background-color: #ffffff;
   cursor: pointer;
   padding: 0;
+  transition: 0.3s;
 }
 
 .toggle-min {
@@ -918,56 +765,52 @@ body {
   right: -9px;
 }
 
-.range-wrapper-inputs {
+.catalog-price-inputs {
   display: flex;
-  position: relative;
   justify-content: center;
-  border: 2px solid #ffffff;
-  border-radius: 4px;
   margin-bottom: 28px;
-  padding: 12px 0 11px;
+  padding: 0;
 }
 
-.range-wrapper-inputs::before {
-  position: absolute;
-  background-color: #ffffff;
-  content: "";
-  width: 48px;
-  height: 2px;
-  transform: rotate(90deg);
-  top: 22px;
+.catalog-price-form {
+  position: relative;
 }
 
-.range-input::-webkit-outer-spin-button,
-.range-input::-webkit-inner-spin-button {
+.price-input::-webkit-outer-spin-button,
+.price-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
 
-.catalog-filter-label {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  font-size: 18px;
-  line-height: 21px;
-  max-width: 143px;
-  padding: 0 17px;
-  color: #ffffff;
-}
-
-.range-name {
+.catalog-price-label {
+  position: absolute;
   opacity: 30%;
+  font-size: 18px;
+  line-height: 23px;
+  top: 11px;
+  right: 16px;
 }
 
-.range-input {
+.price-input {
   font: inherit;
   background-color: transparent;
-  border: none;
   appearance: textfield;
-  padding: 0;
-  max-width: 90px;
+  padding: 12px 46px 11px 19px;
+  max-width: 77px;
   color: #ffffff;
   text-align: start;
+  font-size: 18px;
+  line-height: 21px;
+  border: 2px solid #FFFFFF;
+}
+
+.input-from {
+  border-radius: 4px 0 0 4px;
+}
+
+.input-to {
+  border-left: none;
+  border-radius: 0 4px 4px 0;
 }
 
 .filter-buttons {
@@ -994,11 +837,11 @@ body {
   text-align: center;
   cursor: pointer;
 }
-
+/* main catalog */
 .main-catalog {
   display: flex;
   flex-direction: column;
-  padding: 50px 71px 25px 72px;
+  padding: 50px 71px 25px 73px;
   flex-wrap: wrap;
 }
 
@@ -1041,6 +884,7 @@ body {
   background-repeat: no-repeat;
   background-position: right 11px top 12px;
   appearance: none;
+  transition: 0.3s;
 }
 
 .sort-list {
@@ -1064,6 +908,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
   background-color: #ffffff;
+  transition: 0.3s;
 }
 
 .table {
@@ -1099,12 +944,13 @@ body {
   display: flex;
   flex-direction: column;
   text-align: start;
-  gap: 15px;
+  gap: 16px;
   padding: 20px 20px 19px;
 }
 
 .catalog-item-image {
   height: auto;
+  display: block;
 }
 
 .catalog-item-title {
@@ -1167,6 +1013,7 @@ body {
   margin-bottom: 95px;
   font-family: "PT Sans";
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .button-favorited {
@@ -1220,6 +1067,7 @@ body {
   width: 1056px;
 }
 
+/* pagination */
 .pagination {
   display: flex;
   align-items: center;
@@ -1276,253 +1124,3 @@ body {
 }
 
  /* button styles */
- .brown-button:hover,
- .brown-button:focus {
-  transition: 0.3s;
-  background-color: #615048;
- }
-
- .brown-button:active {
-  transition: 0.3s;
-  background-color: #756157;
-  color: hsla(0, 0%, 100%, 0.3);
- }
-
-.brown-button:disabled {
-  background-color: #E5E5E5;
-}
-
-.blue-button:hover,
-.blue-button:focus {
-  transition: 0.3s;
-  background-color: #68A2CA;
-}
-
-.blue-button:active {
-  transition: 0.3s;
-  background-color: #68A2CA;
-  color: hsla(0, 0%, 100%, 0.3);
-}
-
-.blue-button:disabled {
-  background-color: #E5E5E5;
-}
-
-.green-button:hover,
-.green-button:focus {
-  transition: 0.3s;
-  background-color: #6C9E42;
-}
-
-.green-button:active {
-  transition: 0.3s;
-  background-color: #7DB54F;
-  color: hsla(0, 0%, 100%, 0.3);
-}
-
-.green-button:disabled {
-  background-color: #E5E5E5;
-}
-
-.social-link:hover,
-.social-link:focus {
-  transition: 0.3s;
-  color:#68A2CA;
-}
-
-.social-link:active {
-  transition: 0.3s;
-  color: rgba(104, 162, 202, 0.3);
-}
-
-.footer-phone-call:hover,
-.footer-phone-call:focus {
-  transition: 0.5s;
-  color: #756157;
-}
-
-.footer-phone-call:active {
-  transition: 0.5s;
-  color: rgba(117, 97, 87, 0.3);
-}
-
-.author-link:hover,
-.author-link:focus {
-  transition: 0.5s;
-  color: #756157;
-}
-
-.author-link:active {
-  transition: 0.5s;
-  color: rgba(117, 97, 87, 0.3);
-}
-/* catalog.html */
-
-/* navigation-panel */
-.navigation-link:hover,
-.navigation-link:focus {
-  transition: 0.5s;
-  color: #756157;
-}
-
-.navigation-link:active {
-  transition: 0.5s;
-  color: rgba(117, 97, 87, 0.3);
-}
-
-.navigation-userlink:hover,
-.navigation-userlink:focus {
-  transition: 0.5s;
-  color: #756157;
-}
-
-.navigation-userlink:active {
-  transition: 0.5s;
-  color: rgba(117, 97, 87, 0.3);
-}
-
-/* main-catalog */
-.sort-button:hover,
-.sort-button:focus {
-  transition: 0.3s;
-  border: 2px solid #000000;
-}
-
-.sort-button:active {
-  transition: 0.3s;
-  border: 2px solid #68A2CA;
-}
-
-.pagination-current:hover,
-.pagination-current:active,
-.pagination-current:focus {
-  border: none;
-  background-color: #F2F2F2;
-  color:#000000;
-}
-
-
-/* subscribe */
-.field:hover {
-  background-color: #E6E6E6;
-}
-
-.field:focus {
-  background-color: #E6E6E6;
-  outline: 3px solid #83B3D3;
-}
-
-.field:active {
-  background: #FFFFFF;
-  outline: 2px solid #000000;
-}
-
-.field:disabled {
-  background-color: #e6e6e62f;
-}
-
-.field:invalid {
-  transition: 0.5s;
-  color: #FF5757;
-}
-
-/* control panel catalog.html */
-.breadcrumbs-link:hover {
-  transition: 0.3s;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.breadcrumbs-link:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.breadcrumbs-image:hover {
-  transition: 0.3s;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.range-toggle:hover {
-  transition: 0.5s;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-}
-
-.range-toggle:focus {
-  transition: 0.5s;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  outline: 3px solid #83B3D3;
-}
-
-.range-toggle:active {
-  transition: 0.5s;
-  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
-  outline: 2px solid #83B3D3;
-}
-
-.control:hover .control-check {
-  transition: 0.3s;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.control:focus .control-check {
-  transition: 0.3s;
-  background-color: rgba(255, 255, 255, 0.6);
-  outline: 3px solid #83B3D3;
-}
-/* почему то фокус не ловитcя */
-
-.control:active .control-check {
-  transition: 0.3s;
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.control input:disabled + .control-check {
-  transition: 0.3s;
-  background-color: rgba(255, 255, 255, 0);
-}
-
-.control:focus .control-radio {
-  transition: 0.3s;
-  outline: 3px solid #83B3D3;
-}
-
-.control input:disabled + .control-radio {
-  transition: 0.3s;
-  background-color: rgba(255, 255, 255, 0);
-}
-
-.select-control:hover,
-.select-control:focus {
-  transition: 0.3s;
-  border-color: #68A2CA;
-}
-
-.select-control:active {
-  transition: 0.3s;
-  border-color: #3f5e72;
-}
-
-.select-control:disabled {
-  transition: 0.3s;
-  border-color: rgba(0, 0, 0, 0.3);
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.modal-close-button:hover {
-  transition: 0.5s;
-  background-color: #E6E6E6;
-}
-
-.modal-close-button:focus {
-  transition: 0.5s;
-  outline: 3px solid #83B3D3;
-  background-color: #E6E6E6;
-}
-
-.modal-close-button:active {
-  background-color: #E6E6E6;
-  opacity: 30%;
-}
-
-.modal-search:focus {
-  outline: 3px solid #756257;
-}

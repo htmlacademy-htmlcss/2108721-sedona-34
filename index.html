@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
   </head>
 
   <body class="page-content">
@@ -12,12 +15,12 @@
       <header class="page-header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html">
-            <img class="navigation-image" width="139" height="70" alt="Эмблема города Sedona"
+            <img class="navigation-image" width="139" height="70" alt="вернуться на главную страницу."
               src="./images/index/header/header-logo.svg">
           </a>
           <ul class="navigation-list">
             <li>
-              <a class="navigation-link current-link" href="index.html">Главная</a>
+              <a class="navigation-link current-link">Главная</a>
             </li>
             <li>
               <a class="navigation-link" href="#">О Седоне</a>
@@ -58,18 +61,19 @@
         </nav>
       </header>
       <main>
+        <h1 class="visually-hidden">Welcone to Sedona</h1>
         <div class="main-picture">
           <div class="main-picture-title"></div>
         </div>
         <div class="welcome-block">
-          <h3 class="main-header-title">Седона — небольшой городок в Аризоне,<br>
-            заслуживающий большего!</h3>
+          <h2 class="main-header-title">Седона — небольшой городок в Аризоне, <br>
+            заслуживающий большего!</h2>
           <p class="main-header-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
         <div class="advantages-block">
           <div class="advantages-text">
             <h3 class="advantages-title">Настоящий городок</h3>
-            <span class="advantages-description">— №1 —</span>
+            <span class="advantages-description">— №1 — </span>
             <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
           <img class="advantages-image" src="./images/index/adventages/adventage-1/photo-adventage-1.jpg" width="800"
@@ -86,7 +90,7 @@
                 топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li class="options-item">
-              <h2 class="advantages-title">Сувениры</h2>
+              <h3 class="advantages-title">Сувениры</h3>
               <p class="advantages-description">Не только китайского,&nbsp; но&nbsp;и&nbsp;настоящего местного
                 производства!</p>
             </li>
@@ -119,10 +123,10 @@
           </ol>
         </div>
         <section class="search-block">
-          <h3 class="search-title">Заинтересовались?</h3>
+          <h2 class="search-title">Заинтересовались? </h2>
           <p class="search-text">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц
             в
-            Седоне</p>
+            Седоне </p>
           <button class="brown-button button-search" type="submit">ПОИСК ГОСТИНИЦЫ В седоне</button>
         </section>
         <section class="subscribe">
@@ -186,38 +190,50 @@
     </div>
     <div class="modal-container modal-container-close">
       <div class="modal modal-reservation">
-        <button class="modal-close-button" type="button">
+        <button class="modal-close-button" type="button" tabindex="0">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
-          <h2 class="modal-title">Поиск гостинницы в Седоне</h2>
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="reservation-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="reservation-date">
               <label class="reservation-title" for="arrive-date">Дата Заезда:</label>
               <input class="reservation-field field" type="text" id="arrive-date" name="arrive"
-                placeholder="21 апреля 2020">
+                placeholder="27 апреля 2020" required>
               <div class="reservation-notice">
-                <p class="visually-hidden">На эти даты есть свободные номера. Пока есть.</p>
-                <p class="notice invalid-notice">Мы не можем отправить вас в прошлое.</p>
+                <p class="notice correct-notice-arrive">На эти даты есть свободные номера. Пока есть.</p>
+                <p class="notice invalid-notice-arrive">Мы не можем отправить вас в прошлое.</p>
               </div>
             </div>
             <div class="reservation-date">
-              <label class="reservation-title" for="arrive-date">Дата Выезда:</label>
-              <input class="reservation-field field" type="text" id="arrive-date" name="arrive"
-                placeholder="1 сентября 2021">
-              <div class="reservation-notice">
-                <p class="notice correct-notice">На эти даты есть свободные номера. Пока есть.</p>
-                <p class="visually-hidden">Мы не можем отправить вас в прошлое.</p>
-              </div>
+              <label class="reservation-title" for="departure-date">Дата Выезда:</label>
+              <input class="reservation-field field" type="text" id="departure-date" name="departure"
+                placeholder="1 сентября 2021" required>
+            </div>
+            <div class="reservation-notice">
+              <p class="notice correct-notice-departure">На эти даты есть свободные номера. Пока есть.</p>
+              <p class="notice invalid-notice-departure">Мы не можем отправить вас в прошлое.</p>
             </div>
             <div class="reservation-people">
-              <label class="reservation-title people-title" for="people-count">Взрослые:</label>
-              <input class="people-field field" type="number" id="people-count" name="people" placeholder="2">
-              <label class="reservation-title people-title" for="people-count">Дети:</label>
-              <span class="tooltip-button">
-                <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-              </span>
-              <input class="people-field field" type="number" id="people-count" name="people" placeholder="1">
+              <label class="reservation-title adults-title" for="adult-count">Взрослые:</label>
+              <div class="modal-reservation-button">
+                <button class="button-minus" type="button"></button>
+              </div>
+              <input class="people-field field" type="number" id="adult-count" name="people" placeholder="2">
+              <div class="modal-reservation-button">
+                <button class="button-plus" type="button"></button>
+              </div>
+              <label class="reservation-title children-title" for="children-count">Дети:</label>
+              <div class="tooltip-button" tabindex="0" data-title="Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
+              лет. Дети до 6 лет размещаются бесплатно.">
+              </div>
+              <div class="modal-reservation-button">
+                <button class="button-minus" type="button"></button>
+              </div>
+              <input class="people-field field" type="number" id="children-count" name="people" placeholder="1">
+              <div class="modal-reservation-button">
+                <button class="button-plus" type="button"></button>
+              </div>
             </div>
             <button class="blue-button modal-search" type="button">Найти</button>
           </form>
