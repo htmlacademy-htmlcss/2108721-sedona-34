@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
   </head>
 
   <body class="page-content">
@@ -59,107 +59,109 @@
         </nav>
       </header>
       <main>
-        <div class="filter-image">
-          <div class="filter-form">
-            <h1 class="filter-title">Гостиницы Седоны</h1>
-            <ul class="breadcrumbs">
-              <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="index.html">
-                  <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="m.162 6.15 6-5.5 6 5.5v6.2h-12v-6.2Zm1 .4v4.8h10v-4.8l-5-4.5-5 4.5Zm4 3.8h-1v-3.5h4v3.5h-1v-2.5h-2v2.5Z"
-                      fill="currentColor" />
-                  </svg>
-                </a>
-              </li>
-              <li class="breadcrumbs-item-current">
-                <a class="breadcrumbs-link">Гостиницы</a>
-              </li>
-            </ul>
-            <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Инфраструктура:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="control-item">
-                    <label class="control">
-                      <input class="visually-hidden" type="checkbox" name="swimming-pool" checked tabindex="-1">
-                      <span class="control-check" tabindex="0"></span>
-                      <span class="control-name">Бассейн<span>
-                    </label>
-                  </li>
-                  <li class="control-item">
-                    <label class="control">
-                      <input class="visually-hidden" type="checkbox" name="parking" checked tabindex="-1">
-                      <span class="control-check" tabindex="0"></span>
-                      <span class="control-name">Парковка</span>
-                    </label>
-                  </li>
-                  <li class="control-item">
-                    <label class="control">
-                      <input class="visually-hidden" type="checkbox" name="wi-fi" tabindex="-1">
-                      <span class="control-check" tabindex="0"></span>
-                      <span class="control-name">Wi-Fi</span>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Тип Жилья:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="control-item">
-                    <label class="control">
-                      <input class="visually-hidden" type="radio" name="housing-type" value="hotel" checked>
-                      <span class="control-radio" tabindex="0"></span>
-                      <span class="control-name">Гостиница</span>
-                    </label>
-                  </li>
-                  <li class="control-item">
-                    <label class="control">
-                      <input class="visually-hidden" type="radio" name="housing-type" value="motel">
-                      <span class="control-radio" tabindex="0"></span>
-                      <span class="control-name">Мотель</span>
-                    </label>
-                  </li>
-                  <li class="control-item">
-                    <label class="control">
-                      <input class="visually-hidden" type="radio" name="housing-type" value="apartments">
-                      <span class="control-radio" tabindex="0"></span>
-                      <span class="control-name">Апартаменты</span>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="catalog-price">
-                <legend class="catalog-price-title">Стоимость, ₽:</legend>
-                <div class="catalog-price-inputs">
-                  <div class="catalog-price-form">
-                    <label class="catalog-price-label" for="min-price">от</label>
-                    <input class="price-input input-from" type="number" value="0" id="min-price" name="min-price">
+        <section>
+          <div class="filter-image">
+            <div class="filter-form">
+              <h1 class="filter-title">Гостиницы Седоны</h1>
+              <ul class="breadcrumbs">
+                <li class="breadcrumbs-item">
+                  <a class="breadcrumbs-link" href="index.html">
+                    <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="m.162 6.15 6-5.5 6 5.5v6.2h-12v-6.2Zm1 .4v4.8h10v-4.8l-5-4.5-5 4.5Zm4 3.8h-1v-3.5h4v3.5h-1v-2.5h-2v2.5Z"
+                        fill="currentColor" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="breadcrumbs-item-current">
+                  <a class="breadcrumbs-link">Гостиницы</a>
+                </li>
+              </ul>
+              <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Инфраструктура:</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="control-item">
+                      <label class="control">
+                        <input class="visually-hidden" type="checkbox" name="swimming-pool" checked tabindex="-1">
+                        <span class="control-check" tabindex="0"></span>
+                        <span class="control-name">Бассейн</span>
+                      </label>
+                    </li>
+                    <li class="control-item">
+                      <label class="control">
+                        <input class="visually-hidden" type="checkbox" name="parking" checked tabindex="-1">
+                        <span class="control-check" tabindex="0"></span>
+                        <span class="control-name">Парковка</span>
+                      </label>
+                    </li>
+                    <li class="control-item">
+                      <label class="control">
+                        <input class="visually-hidden" type="checkbox" name="wi-fi" tabindex="-1">
+                        <span class="control-check" tabindex="0"></span>
+                        <span class="control-name">Wi-Fi</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Тип Жилья:</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="control-item">
+                      <label class="control">
+                        <input class="visually-hidden" type="radio" name="housing-type" value="hotel" checked>
+                        <span class="control-radio" tabindex="0"></span>
+                        <span class="control-name">Гостиница</span>
+                      </label>
+                    </li>
+                    <li class="control-item">
+                      <label class="control">
+                        <input class="visually-hidden" type="radio" name="housing-type" value="motel">
+                        <span class="control-radio" tabindex="0"></span>
+                        <span class="control-name">Мотель</span>
+                      </label>
+                    </li>
+                    <li class="control-item">
+                      <label class="control">
+                        <input class="visually-hidden" type="radio" name="housing-type" value="apartments">
+                        <span class="control-radio" tabindex="0"></span>
+                        <span class="control-name">Апартаменты</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="catalog-price">
+                  <legend class="catalog-price-title">Стоимость, ₽:</legend>
+                  <div class="catalog-price-inputs">
+                    <div class="catalog-price-form">
+                      <label class="catalog-price-label" for="min-price">от</label>
+                      <input class="price-input input-from" type="number" value="0" id="min-price" name="min-price">
+                    </div>
+                    <div class="catalog-price-form">
+                      <label class="catalog-price-label" for="max-price">до</label>
+                      <input class="price-input input-to" type="number" value="9000" id="max-price" name="max-price">
+                    </div>
                   </div>
-                  <div class="catalog-price-form">
-                    <label class="catalog-price-label" for="max-price">до</label>
-                    <input class="price-input input-to" type="number" value="9000" id="max-price" name="max-price">
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0; width: 227px">
+                      <button class="range-toggle toggle-min" type="button">
+                        <span class="visually-hidden">изменить минимальную цену</span>
+                      </button>
+                      <button class="range-toggle toggle-max" type="button">
+                        <span class="visually-hidden">изменить максимальную цену</span>
+                      </button>
+                    </div>
                   </div>
+                </fieldset>
+                <div class="filter-buttons">
+                  <button class="blue-button button-accept" type="submit">Применить</button>
+                  <span class="button-decline" tabindex="0">Сбросить</span>
                 </div>
-                <div class="range-scale">
-                  <div class="range-bar" style="left: 0; width: 227px">
-                    <button class="range-toggle toggle-min" type="button">
-                      <span class="visually-hidden">изменить минимальную цену</span>
-                    </button>
-                    <button class="range-toggle toggle-max" type="button">
-                      <span class="visually-hidden">изменить максимальную цену</span>
-                    </button>
-                  </div>
-                </div>
-              </fieldset>
-              <div class="filter-buttons">
-                <button class="blue-button button-accept" type="submit">Применить</button>
-                <span class="button-decline" tabindex="0">Сбросить</span>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
-        </div>
+        </section>
         <section class="main-catalog">
           <div class="sort-panel">
             <h2 class="visually-hidden">сортировка отелей</h2>
@@ -311,15 +313,17 @@
             </div>
           </div>
         </section>
-        <div class="subcribe-block">
-          <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-          <p class="subscribe-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-          <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-            <input class="field subscribe-field" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail"
-              type="email" required>
-            <button class="blue-button subscribe-button" type="submit">подписаться</button>
-          </form>
-        </div>
+        <section>
+          <div class="subcribe-block">
+            <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+            <p class="subscribe-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+            <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+              <input class="field subscribe-field" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail"
+                type="email" required>
+              <button class="blue-button subscribe-button" type="submit">подписаться</button>
+            </form>
+          </div>
+        </section>
       </main>
       <footer class="page-footer">
         <ul class="social-list">
@@ -396,22 +400,22 @@
               <div class="reservation-people">
                 <label class="reservation-title adults-title" for="adult-count">Взрослые:</label>
                 <div class="modal-reservation-button">
-                  <button class="button-minus" type="button" area-label="уменьшить количество человек"></button>
+                  <button class="button-minus" type="button" value="уменьшить количество человек"></button>
                 </div>
                 <input class="people-field field" type="number" id="adult-count" name="people" placeholder="2">
                 <div class="modal-reservation-button">
-                  <button class="button-plus" type="button" ></button>
+                  <button class="button-plus" type="button" value="увеличить количество человек"></button>
                 </div>
                 <label class="reservation-title children-title" for="children-count">Дети:</label>
                 <div class="tooltip-button" tabindex="0" data-title="Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
                 лет. Дети до 6 лет размещаются бесплатно.">
                 </div>
                 <div class="modal-reservation-button">
-                  <button class="button-minus" type="button" area-label="уменьшить количество человек"></button>
+                  <button class="button-minus" type="button" value="уменьшить количество человек"></button>
                 </div>
                 <input class="people-field field" type="number" id="children-count" name="people" placeholder="1">
                 <div class="modal-reservation-button">
-                  <button class="button-plus" type="button" area-label="увеличить количество человек"></button>
+                  <button class="button-plus" type="button" value="увеличить количество человек"></button>
                 </div>
               </div>
               <button class="blue-button modal-search" type="submit">Найти</button>
@@ -419,6 +423,6 @@
           </section>
         </div>
       </div>
+    </div>
   </body>
-
 </html>
