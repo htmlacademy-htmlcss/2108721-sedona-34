@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.ico">
   </head>
 
   <body class="page-content">
@@ -291,113 +291,51 @@
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <form
-            class="reservation-form"
-            action="https://echo.htmlacademy.ru/"
-            method="post"
-          >
+          <form class="reservation-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="reservation-date">
-              <label class="reservation-title" for="arrive-date"
-                >Дата Заезда:</label
-              >
-              <input
-                class="reservation-field field"
-                type="text"
-                id="arrive-date"
-                name="arrive"
-                placeholder="27 апреля 2020"
-                required
-              />
+              <label class="reservation-title" for="arrive-date">Дата Заезда:</label>
+              <input class="reservation-field field" type="text" id="arrive-date" name="arrive"
+                placeholder="27 апреля 2020" required>
               <div class="reservation-notice">
-                <p class="notice correct-notice-arrive">
-                  На эти даты есть свободные номера. Пока есть.
-                </p>
-                <p class="notice invalid-notice-arrive">
-                  Мы не можем отправить вас в прошлое.
-                </p>
+                <p class="notice correct-notice-arrive">На эти даты есть свободные номера. Пока есть.</p>
+                <p class="notice invalid-notice-arrive">Мы не можем отправить вас в прошлое.</p>
               </div>
             </div>
             <div class="reservation-date">
-              <label class="reservation-title" for="departure-date"
-                >Дата Выезда:</label
-              >
-              <input
-                class="reservation-field field"
-                type="text"
-                id="departure-date"
-                name="departure"
-                placeholder="1 сентября 2021"
-                required
-              />
+              <label class="reservation-title" for="departure-date">Дата Выезда:</label>
+              <input class="reservation-field field" type="text" id="departure-date" name="departure"
+                placeholder="1 сентября 2021" required>
             </div>
             <div class="reservation-notice">
-              <p class="notice correct-notice-departure">
-                На эти даты есть свободные номера. Пока есть.
-              </p>
-              <p class="notice invalid-notice-departure">
-                Мы не можем отправить вас в прошлое.
-              </p>
+              <p class="notice correct-notice-departure">На эти даты есть свободные номера. Пока есть.</p>
+              <p class="notice invalid-notice-departure">Мы не можем отправить вас в прошлое.</p>
             </div>
             <div class="reservation-people">
-              <label class="reservation-title adults-title" for="adult-count"
-                >Взрослые:</label
-              >
+              <label class="reservation-title adults-title" for="adult-count">Взрослые:</label>
               <div class="modal-reservation-button">
-                <button
-                  class="button-minus"
-                  type="button"
-                  area-label="уменьшить количество человек"
-                ></button>
+                <button class="button-minus" type="button" value="уменьшить количество человек"></button>
               </div>
-              <input
-                class="people-field field"
-                type="number"
-                id="adult-count"
-                name="people"
-                placeholder="2"
-              />
+              <input class="people-field field" type="number" id="adult-count" name="people" placeholder="2">
               <div class="modal-reservation-button">
-                <button class="button-plus" type="button"></button>
+                <button class="button-plus" type="button" value="увеличить количество человек"></button>
               </div>
-              <label
-                class="reservation-title children-title"
-                for="children-count"
-                >Дети:</label
-              >
-              <div
-                class="tooltip-button"
-                tabindex="0"
-                data-title="Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
-              лет. Дети до 6 лет размещаются бесплатно."
-              ></div>
-              <div class="modal-reservation-button">
-                <button
-                  class="button-minus"
-                  type="button"
-                  area-label="уменьшить количество человек"
-                ></button>
+              <label class="reservation-title children-title" for="children-count">Дети:</label>
+              <div class="tooltip-button" tabindex="0" data-title="Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
+              лет. Дети до 6 лет размещаются бесплатно.">
               </div>
-              <input
-                class="people-field field"
-                type="number"
-                id="children-count"
-                name="people"
-                placeholder="1"
-              />
               <div class="modal-reservation-button">
-                <button
-                  class="button-plus"
-                  type="button"
-                  area-label="увеличить количество человек"
-                ></button>
+                <button class="button-minus" type="button" value="уменьшить количество человек"></button>
+              </div>
+              <input class="people-field field" type="number" id="children-count" name="people" placeholder="1">
+              <div class="modal-reservation-button">
+                <button class="button-plus" type="button" value="увеличить количество человек"></button>
               </div>
             </div>
-            <button class="blue-button modal-search" type="submit">
-              Найти
-            </button>
+            <button class="blue-button modal-search" type="submit">Найти</button>
           </form>
         </section>
       </div>
+    </div>
     </div>
   </body>
 </html>
