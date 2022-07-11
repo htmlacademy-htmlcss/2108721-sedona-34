@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/modal.css">
-    <link rel="stylesheet" href="./styles/buttons.css">
     <link rel="icon" type="image/png" href="./images/favicon.png">
   </head>
 
@@ -26,7 +24,7 @@
               <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li>
-              <a class="navigation-link current-link">Гостиницы</a>
+              <a class="navigation-link current-link" href="#">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-user">
@@ -75,7 +73,7 @@
                   </svg>
                 </a>
               </li>
-              <li class="breadcrumbs-item">
+              <li class="breadcrumbs-item-current">
                 <a class="breadcrumbs-link">Гостиницы</a>
               </li>
             </ul>
@@ -85,21 +83,21 @@
                 <ul class="catalog-filter-list">
                   <li class="control-item">
                     <label class="control">
-                      <input class="visually-hidden" type="checkbox" name="swimming-pool" checked tabindex="0">
+                      <input class="visually-hidden" type="checkbox" name="swimming-pool" checked tabindex="-1">
                       <span class="control-check" tabindex="0"></span>
-                      <span class="control-name">Бассейн</span>
+                      <span class="control-name">Бассейн<span>
                     </label>
                   </li>
                   <li class="control-item">
                     <label class="control">
-                      <input class="visually-hidden" type="checkbox" name="parking" checked tabindex="0">
+                      <input class="visually-hidden" type="checkbox" name="parking" checked tabindex="-1">
                       <span class="control-check" tabindex="0"></span>
                       <span class="control-name">Парковка</span>
                     </label>
                   </li>
                   <li class="control-item">
                     <label class="control">
-                      <input class="visually-hidden" type="checkbox" name="wi-fi">
+                      <input class="visually-hidden" type="checkbox" name="wi-fi" tabindex="-1">
                       <span class="control-check" tabindex="0"></span>
                       <span class="control-name">Wi-Fi</span>
                     </label>
@@ -136,12 +134,12 @@
                 <legend class="catalog-price-title">Стоимость, ₽:</legend>
                 <div class="catalog-price-inputs">
                   <div class="catalog-price-form">
-                    <label class="catalog-price-label">от</label>
-                    <input class="price-input input-from" type="number" value="0" name="min-price">
+                    <label class="catalog-price-label" for="min-price">от</label>
+                    <input class="price-input input-from" type="number" value="0" id="min-price" name="min-price">
                   </div>
                   <div class="catalog-price-form">
-                    <label class="catalog-price-label">до</label>
-                    <input class="price-input input-to" type="number" value="9000" name="min-price">
+                    <label class="catalog-price-label" for="max-price">до</label>
+                    <input class="price-input input-to" type="number" value="9000" id="max-price" name="max-price">
                   </div>
                 </div>
                 <div class="range-scale">
@@ -371,7 +369,7 @@
       </footer>
       <div class="modal-container modal-container-close">
         <div class="modal modal-reservation">
-          <button class="modal-close-button" type="button" tabindex="0">
+          <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal-content">
@@ -398,30 +396,29 @@
               <div class="reservation-people">
                 <label class="reservation-title adults-title" for="adult-count">Взрослые:</label>
                 <div class="modal-reservation-button">
-                  <button class="button-minus" type="button"></button>
+                  <button class="button-minus" type="button" area-label="уменьшить количество человек"></button>
                 </div>
                 <input class="people-field field" type="number" id="adult-count" name="people" placeholder="2">
                 <div class="modal-reservation-button">
-                  <button class="button-plus" type="button"></button>
+                  <button class="button-plus" type="button" ></button>
                 </div>
                 <label class="reservation-title children-title" for="children-count">Дети:</label>
                 <div class="tooltip-button" tabindex="0" data-title="Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
                 лет. Дети до 6 лет размещаются бесплатно.">
                 </div>
                 <div class="modal-reservation-button">
-                  <button class="button-minus" type="button"></button>
+                  <button class="button-minus" type="button" area-label="уменьшить количество человек"></button>
                 </div>
                 <input class="people-field field" type="number" id="children-count" name="people" placeholder="1">
                 <div class="modal-reservation-button">
-                  <button class="button-plus" type="button"></button>
+                  <button class="button-plus" type="button" area-label="увеличить количество человек"></button>
                 </div>
               </div>
-              <button class="blue-button modal-search" type="button">Найти</button>
+              <button class="blue-button modal-search" type="submit">Найти</button>
             </form>
           </section>
         </div>
       </div>
-    </div>
   </body>
 
 </html>
