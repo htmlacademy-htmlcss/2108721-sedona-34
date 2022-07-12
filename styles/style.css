@@ -379,10 +379,11 @@ body {
   transition: 0.3s;
 }
 .button-search {
-  width: 575px;
+  width: 544px;
   cursor: pointer;
   padding: 12px 15px;
   font-family: "PT Sans", sans-serif;
+  text-decoration: none;
 }
 
  /* subscribe section  */
@@ -742,40 +743,6 @@ body {
   padding: 0;
 }
 
-.range-scale {
-  position: relative;
-  height: 4px;
-  background-color: #ffffff;
-}
-
-.range-bar {
-  position: absolute;
-  height: 4px;
-  background-color: #ffffff;
-}
-
-.range-toggle {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #ffffff;
-  border-radius: 5px;
-  background-color: #ffffff;
-  cursor: pointer;
-  padding: 0;
-  transition: 0.3s;
-}
-
-.toggle-min {
-  left: -1px;
-  top: -8px;
-}
-
-.toggle-max {
-  top: -8px;
-  right: -9px;
-}
-
 .catalog-price-inputs {
   display: flex;
   justify-content: center;
@@ -822,6 +789,42 @@ body {
 .input-to {
   border-left: none;
   border-radius: 0 4px 4px 0;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+  opacity: 30%;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+  transition: 0.3s;
+}
+
+.toggle-min {
+  left: -1px;
+  top: -8px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -9px;
 }
 
 .filter-buttons {
