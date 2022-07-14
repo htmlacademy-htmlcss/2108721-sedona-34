@@ -879,6 +879,7 @@ body {
 
 .sort-panel {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   margin-bottom: 56px;
 }
@@ -1100,6 +1101,7 @@ body {
   display: block;
   content: "";
   border: 1px solid #e6e6e6;
+  background-color: #e6e6e6;
   width: 1056px;
 }
 
@@ -1154,7 +1156,9 @@ body {
 
 .results-block {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  max-width: 395px;
+  align-items: flex-start;
 }
 
 .hotel-onpage {
@@ -1171,6 +1175,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   max-width: 165px;
+  padding-top: 5px;
 }
 
 .select-count {
